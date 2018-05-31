@@ -1,17 +1,12 @@
-#banner {
-    top: 0;
-}
-
-header {
-    padding: 25px 20px;
-}
 
 section {
-    margin-top: 150px;
+    margin-top: 30px;
 }
 
 nav {
-    top: 180px;
+    top: 60px;
+    text-align: left;
+    margin-left: 300px;
 }
 
 @media print,

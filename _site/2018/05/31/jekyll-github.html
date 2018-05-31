@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>使用 jekyll + github 搭建免费博客指南 | magician’s blog</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="使用 jekyll + github 搭建免费博客指南" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="准备工作" />
+<meta property="og:description" content="准备工作" />
+<link rel="canonical" href="http://localhost:4000/2018/05/31/jekyll-github.html" />
+<meta property="og:url" content="http://localhost:4000/2018/05/31/jekyll-github.html" />
+<meta property="og:site_name" content="magician’s blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-31T00:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"准备工作","headline":"使用 jekyll + github 搭建免费博客指南","dateModified":"2018-05-31T00:00:00+08:00","datePublished":"2018-05-31T00:00:00+08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/05/31/jekyll-github.html"},"url":"http://localhost:4000/2018/05/31/jekyll-github.html","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="shortcut icon" href="/images/favicon.png?v=">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="/css/common.css?v=">
+    <link rel="stylesheet" href="/css/page.css?v=">
+
+    <script src="/js/jquery-3.3.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+        <section>
+            <div class="page-title">使用 jekyll + github 搭建免费博客指南</div>
+            <h3 id="准备工作">准备工作</h3>
+
+<blockquote>
+  <p>安装 git（没有则安装）</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 安装 git</span>
+brew install git
+
+<span class="c"># 查看版本</span>
+git <span class="nt">--version</span> <span class="c"># git version 2.5.4 (Apple Git-61)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>安装 ruby（没有则安装，已安装则更新）</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 安装 ruby</span>
+brew install ruby
+
+<span class="c"># 更新 ruby</span>
+brew upgrade ruby
+
+<span class="c"># 查看版本</span>
+ruby <span class="nt">-v</span> <span class="c"># ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin14]</span>
+</code></pre></div></div>
+
+<h3 id="github-上创建项目">github 上创建项目</h3>
+<ol>
+  <li>登录 <a href="https://github.com/">github</a></li>
+  <li>创建新库 username.github.io</li>
+  <li>选中 Initialize this repository with a README</li>
+  <li>Create repository</li>
+</ol>
+
+<h3 id="克隆项目到本地">克隆项目到本地</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:username/username.github.io.git
+</code></pre></div></div>
+
+<h3 id="创建-jekyll-项目">创建 jekyll 项目</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 进入 username.github.io 库中</span>
+
+</code></pre></div></div>
+
+<h3 id="发布到-github-上">发布到 github 上</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s1">'first post'</span>
+git push origin master
+</code></pre></div></div>
+
+<h3 id="绑定域名">绑定域名</h3>
+<p>编辑cname文件</p>
+
+
+        </section>
+        <footer>
+            @2018
+        </footer>
+    </div>
+</body>
+
+</html>
