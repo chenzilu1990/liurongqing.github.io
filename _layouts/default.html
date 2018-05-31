@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% seo %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> {% seo %}
     <link rel="shortcut icon" href="{{ 'image/favicon.png?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/css/common.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -26,7 +25,10 @@
     </header>
 
     <div id="banner">
-        <a href="{{ site.github.repository_url }}" class="button fork">
+        <a href="{{ site.github.repository_url }}">
+            <span id="logo"></span>
+        </a>
+        <a href="/" class="button fork">
             <strong>home</strong>
         </a>
     </div>
