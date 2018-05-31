@@ -1,0 +1,43 @@
+#banner {
+    top: 0;
+}
+
+header {
+    padding: 25px 20px;
+}
+
+section {
+    margin-top: 150px;
+}
+
+nav {
+    top: 180px;
+}
+
+@media print,
+screen and (max-width: 720px) {
+    section {
+        margin-top: 130px;
+    }
+
+    header {
+        padding: 20px;
+    }
+}
+
+@media print,
+screen and (max-width: 480px) {
+    section {
+        margin-top: 5px;
+    }
+    header {
+        padding: 5px 0px;
+    }
+}
+
+.page-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #999999;
+}
