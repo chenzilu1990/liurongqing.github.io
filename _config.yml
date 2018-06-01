@@ -1,2 +1,13 @@
 title: magician's blog
 description: Please enjoy my performance
+theme: jekyll-theme-fast
+sass:
+  style: compressed
+kramdown:
+  input: GFM
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "page"
