@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: 使用 jekyll + github 搭建免费博客指南
 ---
 

@@ -1,23 +1,33 @@
-(function () {
-    let oNavUl = document.querySelector('nav');
-    let oNavs = document.querySelectorAll('h1,h2,h3');
+var sectionHeight = function() {
+  var total    = $(window).height(),
+      $section = $('section').css('height','auto');
 
-    let aNavs = [], sNavs = '', aText = '', showText = '';
+  if ($section.outerHeight(true) < total) {
+    var margin = $section.outerHeight(true) - $section.height();
+    $section.height(total - margin - 20);
+  } else {
+    $section.css('height','auto');
+  }
+}
 
-    for (let i = 0, len = oNavs.length; i < len; i++) {
+$(window).resize(sectionHeight);
 
-        // 保留字母数字下划线、中文、空格，然后再将空格替换成-
-        aText = oNavs[i].textContent.replace(/[^ \w\u4e00-\u9fa5]/g, '').replace(/ /g, '-').toLowerCase();
-        showText = htmlencode(oNavs[i].innerText)
-        aNavs.push('<div class="' + oNavs[i].nodeName.toLowerCase() + '"><a href="#' + aText + '">' + showText + '</a></div>');
-    }
+$(function() {
+  $("section h1, section h2, section h3").each(function(){
+    $("nav ul").append("<li class='tag-" + this.nodeName.toLowerCase() + "'><a href='#" + $(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,'') + "'>" + $(this).text() + "</a></li>");
+    $(this).attr("id",$(this).text().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g,''));
+    $("nav ul li:first-child a").parent().addClass("active");
+  });
 
-    sNavs = aNavs.join('');
-    oNavUl.innerHTML = sNavs;
+  $("nav ul li").on("click", "a", function(event) {
+    var position = $($(this).attr("href")).offset().top - 190;
+    $("html, body").animate({scrollTop: position}, 400);
+    $("nav ul li a").parent().removeClass("active");
+    $(this).parent().addClass("active");
+    event.preventDefault();
+  });
 
-    function htmlencode(s) {
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(s));
-        return div.innerHTML;
-    }
-})();
+  sectionHeight();
+
+  $('img').on('load', sectionHeight);
+});
