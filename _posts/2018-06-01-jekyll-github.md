@@ -141,7 +141,7 @@ bundle install
 ```bash
 
 # 开启服务实时监听
-jekyll serve
+bundle exec jekyll serve
 
 # 打开浏览器访问
 http://127.0.0.1:4000
@@ -163,20 +163,5 @@ git remote add origin git@github.com:username/username.github.io.git
 git push origin master
 ```
 
-## 创建 jekyll 项目
-```bash
-# 进入 username.github.io 库中
-
-```
-
-### 发布到 github 上
-```bash
-git add .
-git commit -m 'first post'
-
-git push origin master git@github.com:username/username.github.io.git
-```
-
 ### 绑定域名
-编辑cname文件
 
