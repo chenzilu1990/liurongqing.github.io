@@ -3,14 +3,11 @@ layout: page
 title: 使用 jekyll + github 搭建免费博客指南
 ---
 
+> Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项目的站点。 <br>
+> 用户或组织的站点仓库根据用户/组织的名称命名 username.github.io，代码放在 master 分支中。 <br>
+> 项目的站点可以随便命名如 projectname， 代码放在 gh-pages 分支中，username.github.io/projectname。
 
 ## github 上创建项目
-
-> Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项目的站点
-
-> 用户或组织的站点仓库根据用户/组织的名称命名 username.github.io，代码放在 master 分支中
-
-> 项目的站点可以随便命名如 projectname， 代码放在 gh-pages 分支中，username.github.io/projectname
 
 1. 登录 [github](https://github.com/) 
 2. 创建新库 username.github.io
