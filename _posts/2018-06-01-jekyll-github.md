@@ -174,5 +174,15 @@ git remote add origin git@github.com:username/username.github.io.git
 git push origin master
 ```
 
-### 绑定域名
+## 绑定域名
+进入域名注册商管理后台，添加一条解析记录
+1. 记录类型 CNAME
+2. 主机记录 个人域名.com
+3. 记录值 username.github.io
+
+在本项目根目录下创建 `CNAME` 文件
+
+```
+个人域名.com
+```
 
