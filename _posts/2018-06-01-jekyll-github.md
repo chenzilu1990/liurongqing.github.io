@@ -79,9 +79,13 @@ gem install jekyll
 jekyll -v # 3.8.2
 ```
 
-## 创建本地目录结构
+## 创建本地目录结构（推荐）
 
-创建目录 `username.github.io`，并在该目录下创建以下目录或文件
+> 本地创建目录引用 `jekyll-theme-fast` 主题
+
+> 优点： 容易更新主题
+
+> 创建目录 `username.github.io`，并在该目录下创建以下目录或文件
 
 > 创建 `_config.yml` 配置文件
 
@@ -89,16 +93,7 @@ jekyll -v # 3.8.2
 title: 我的博客
 description: 这个博客很简洁
 theme: jekyll-theme-fast
-sass:
-  style: compressed
-kramdown:
-  input: GFM
-defaults:
-  -
-    scope:
-      path: "_posts"
-    values:
-      layout: "page"
+remote_theme: liurongqing/jekyll-theme-fast
 ```
 
 > 创建 `Gemfile` 文件
@@ -108,11 +103,12 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'jekyll-theme-fast'
+
 ```
 
 > 创建 `index.html` 文件
 
-```html
+```markdown
 --- 
 layout: default 
 title: 这是我的首页
@@ -121,9 +117,14 @@ title: 这是我的首页
 
 > 创建 _posts 目录并在该目录下创建 `.md` 结尾文件
 
-年-月-日-标题.md
-
 2018-06-01-jekyll.md
+
+```markdown
+---
+layout: page
+title: 标题
+---
+```
 
 > 创建 `README.md` 文件
 
@@ -131,10 +132,22 @@ title: 这是我的首页
 项目说明
 ```
 
-## 运行安装 Gemfile 包
+## 克隆主题直接修改(不推荐)
+
+> 直接克隆主题，然后在 `_posts` 目录中写内容
+
+> 缺点：不好更新主题
+
+```bash
+git clone https://github.com/liurongqing/jekyll-theme-fast.git
+```
+
+## 安装更新 Gemfile 包
 
 ```bash
 bundle install
+
+bundle update
 ```
 
 ## 预览项目
@@ -142,7 +155,7 @@ bundle install
 ```bash
 
 # 开启服务实时监听
-bundle exec jekyll serve
+jekyll serve
 
 # 打开浏览器访问
 http://127.0.0.1:4000
