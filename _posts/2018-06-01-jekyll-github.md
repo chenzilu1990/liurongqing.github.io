@@ -3,9 +3,9 @@ layout: page
 title: 使用 jekyll + github 搭建免费博客指南
 ---
 
-> Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项目的站点。 <br>
-> 用户或组织的站点仓库根据用户/组织的名称命名 username.github.io，代码放在 master 分支中。 <br>
-> 项目的站点可以随便命名如 projectname， 代码放在 gh-pages 分支中，username.github.io/projectname。
+Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项目的站点。 <br>
+用户或组织的站点仓库根据用户/组织的名称命名 username.github.io，代码放在 master 分支中。 <br>
+项目的站点可以随便命名如 projectname， 代码放在 gh-pages 分支中，username.github.io/projectname。
 
 ## github 上创建项目
 
@@ -78,9 +78,8 @@ jekyll -v # 3.8.2
 
 ## 创建本地目录结构（推荐）
 
-> 本地创建目录引用 `jekyll-theme-fast` 主题
-
-> 优点： 容易更新主题
+本地创建目录引用 `jekyll-theme-fast` 主题 <br>
+优点： 容易更新主题
 
 > 创建目录 `username.github.io`，并在该目录下创建以下目录或文件
 
@@ -131,9 +130,8 @@ title: 标题
 
 ## 克隆主题直接修改(不推荐)
 
-> 直接克隆主题，然后在 `_posts` 目录中写内容
-
-> 缺点：不好更新主题
+直接克隆主题，然后在 `_posts` 目录中写内容 <br>
+缺点：不好更新主题
 
 ```bash
 git clone https://github.com/liurongqing/jekyll-theme-fast.git
