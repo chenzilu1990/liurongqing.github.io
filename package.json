@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/liurongqing/liurongqing.github.io#readme",
   "devDependencies": {
+    "fontmin": "^0.9.7-beta",
     "gulp": "^3.9.1",
     "gulp-fontmin": "^0.7.4"
   }
