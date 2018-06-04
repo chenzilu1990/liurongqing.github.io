@@ -17,11 +17,12 @@ gulp.task('default', function (cb) {
 })
 
 function minifyFont(text, cb) {
+
     gulp
         .src('assets/fonts/tmp/*.ttf')
         .pipe(fontmin({
             text: text
         }))
-        .pipe(gulp.dest('dest/font'))
+        .pipe(gulp.dest('assets/fonts/'))
         .on('end', cb);
 }
