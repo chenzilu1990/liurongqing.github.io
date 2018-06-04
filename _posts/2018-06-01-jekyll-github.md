@@ -8,8 +8,6 @@ Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项�
 项目的站点可以随便命名如 projectname， 代码放在 gh-pages 分支中，username.github.io/projectname。
 
 
-:smile:
-
 ## github 上创建项目
 
 1. 登录 [github](https://github.com/) 
@@ -62,12 +60,6 @@ gem sources -a https://ruby.taobao.org
 sudo gem update --system
 ```
 
-> bundle 更新库文件（要经常执行这个命令）
-
-```bash
-bundle update
-```
-
 > 安装 jekyll
 
 ```bash
@@ -90,9 +82,10 @@ jekyll -v # 3.8.2
 
 ```yml
 title: 我的博客
-description: 这个博客很简洁
 theme: jekyll-theme-fast
 remote_theme: liurongqing/jekyll-theme-fast
+plugins:
+  - jemoji
 ```
 
 > 创建 `Gemfile` 文件
@@ -101,6 +94,7 @@ remote_theme: liurongqing/jekyll-theme-fast
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem 'jemoji'
 gem 'jekyll-theme-fast'
 
 ```
@@ -145,7 +139,8 @@ git clone https://github.com/liurongqing/jekyll-theme-fast.git
 ```bash
 bundle install
 
-bundle update
+# 要经常执行这个命令，更新库文件
+bundle update 
 ```
 
 ## 预览项目
@@ -186,4 +181,3 @@ git push origin master
 ```
 个人域名.com
 ```
-
