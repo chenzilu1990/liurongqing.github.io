@@ -1,0 +1,23 @@
+{
+  "name": "liurongqing.github.io",
+  "version": "1.0.0",
+  "description": "[https://www.liurongqing.com](https://www.liurongqing.com)",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liurongqing/liurongqing.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liurongqing/liurongqing.github.io/issues"
+  },
+  "homepage": "https://github.com/liurongqing/liurongqing.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-fontmin": "^0.7.4"
+  }
+}
