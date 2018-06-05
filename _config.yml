@@ -3,3 +3,9 @@ theme: jekyll-theme-fast
 remote_theme: liurongqing/jekyll-theme-fast
 plugins:
   - jemoji
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "magician_page"

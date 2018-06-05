@@ -1,9 +1,21 @@
 @font-face {
-    font-family: 'SourceHanSansCN-Normal';
-    src: url('/assets/fonts/SourceHanSansCN-Normal.ttf');
+    font-family: "Source Han Sans CN Normal";
+    src: url("/assets/fonts/SourceHanSansCN-Normal.ttf");
+    font-style: normal;
+    font-weight: normal;
 }
+/* @font-face {
+    font-family: "Source Han Sans CN Normal";
+    src: url("/assets/fonts/SourceHanSansCN-Normal.eot");
+    src: url("/assets/fonts/SourceHanSansCN-Normal.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/SourceHanSansCN-Normal.woff") format("woff"),
+    url("/assets/fonts/tmp/SourceHanSansCN-Normal.ttf") format("truetype"),
+    url("/assets/fonts/SourceHanSansCN-Normal.svg#Source Han Sans CN Normal") format("svg"); 
+    font-style: normal;
+    font-weight: normal;
+} */
 
 body,
 .markdown-body {
-    font-family: SourceHanSansCN-Normal, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    font-family: "Source Han Sans CN Normal", -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }

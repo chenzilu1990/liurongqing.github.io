@@ -5,3 +5,8 @@ node_modules
 *.eot
 *.svg
 *.woff
+assets/fonts/tmp/*
+!assets/fonts/tmp/*.zip
+
+assets/fonts/*
+!assets/fonts/*.ttf
