@@ -84,6 +84,12 @@ theme: jekyll-theme-fast
 remote_theme: liurongqing/jekyll-theme-fast
 plugins:
   - jemoji
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "page"
 ```
 
 > 创建 `Gemfile` 文件
@@ -94,10 +100,9 @@ source 'https://rubygems.org'
 gem 'jekyll'
 gem 'jemoji'
 gem 'jekyll-theme-fast'
-
 ```
 
-> 创建 `index.html` 文件
+> 创建 `index.md` 文件
 
 ```markdown
 --- 
@@ -112,7 +117,6 @@ title: 这是我的首页
 
 ```markdown
 ---
-layout: page
 title: 标题
 ---
 ```

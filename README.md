@@ -1,3 +1,6 @@
+## 本站
+[表情](./emoji.md)
+
 ## 博客
 [https://www.liurongqing.com](https://www.liurongqing.com)
 
