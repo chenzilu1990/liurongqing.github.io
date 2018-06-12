@@ -20,6 +20,34 @@ title: 《高性能网站建设进阶指南》笔记（一 整理中...）
 
 
 ## 2. 创建快速响应的 Web 应用
+### 2.1 耗时
+加密算法、复杂的图形计算和图像处理
+
+### 2.2 足够快的定义
+1. 超过 0.1 秒给人不够平滑的感觉
+2. 超过 1 秒感觉应用缓慢
+3. 超过 10 秒用户沮丧
+
+手动代码检测
+```html
+<div onclick="test()"></div>
+
+<script>
+function test () {
+    var start = new Date().getMilliseconds();
+
+    // 开销很大的代码...
+    var stop = new Date().getMilliseconds();
+
+    console.log(stop - start);
+}
+</script>
+```
+
+自动代码检测 <br>
+使用浏览器插件之类的
+
+Web Workers
 
 ## 3. 拆分初始化负载
 
