@@ -13,6 +13,7 @@ body {
     font-size: 1.3em;
     color: #333;
     line-height: 1.42857143;
+    letter-spacing: 1px;
 }
 
 .content {
@@ -26,6 +27,44 @@ body {
     background: #efefef;
 }
 
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav div {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* background: white; */
+    padding: 2px 8px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #eee;
+    cursor: pointer;
+}
+
+.nav div.active {
+    color: #235A9F;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 40px;
+    font-size:38px;
+    color: #235A9F;
+    letter-spacing: 1.2px;
+}
+
+.logo img {
+    width: 38px;
+    margin-right: 8px;
+}
+
+.logo div {
+    line-height: 1;
+}
 .post {
     background: #fff;
     border-radius: 3px;
@@ -37,7 +76,7 @@ body {
 .title h2 {
     color: #222;
     font-size: 1.8em;
-    margin: 0 0 .2em;
+    margin: 0 0 .3em;
     font-weight: 500;
     line-height: 1.1;
 }

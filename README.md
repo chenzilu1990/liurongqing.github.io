@@ -16,3 +16,4 @@
 ## gem 包
 [https://rubygems.org/profiles/magicians](https://rubygems.org/profiles/magicians)
 
+https://github.com/encharm/Font-Awesome-SVG-PNG
