@@ -1,0 +1,11 @@
+<div class="nav">
+    {% for tag in site.tags%} 
+        <a href="/tag/{{tag[0]}}/">
+            {% if(tag[0] == page.tags) %}
+                <div class="active">{{tag[0]}}</div>
+            {% else %}
+                <div>{{tag[0]}}</div>
+            {% endif %} 
+        </a>
+    {% endfor %}
+</div>

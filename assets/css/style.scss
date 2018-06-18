@@ -1,4 +1,120 @@
 ---
----
+--- 
 
-@import "jekyll-theme-fast";
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #F2F2F2;
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.42857143;
+    letter-spacing: 1px;
+}
+
+.content {
+    margin: 2.8em auto;
+    max-width: 860px;
+    .header {
+        height: 50px;
+        // background: #efefef;
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 40px;
+            font-size: 38px;
+            color: #235A9F;
+            letter-spacing: 1.2px;
+            img {
+                width: 38px;
+                margin-right: 8px;
+            }
+            div {
+                line-height: 1;
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            color: inherit;
+        }
+        div {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            /* background: white; */
+            padding: 2px 8px;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px #eee;
+            cursor: pointer;
+            &.active {
+                color: #235A9F;
+            }
+        }
+    }
+    .post {
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px #aaa;
+        padding: 3em;
+        margin: 2em auto;
+        .title {
+            h2 {
+                color: #222;
+                font-size: 1.8em;
+                margin: 0 0 .3em;
+                font-weight: 500;
+                line-height: 1.1;
+                a {
+                    color: #222;
+                }
+            }
+            p {
+                color: #999;
+                font-size: 90%;
+                margin: 0 0 1.8em;
+            }
+        }
+        .description {
+            color: #707070;
+            font-size: 1.15em;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            line-height: 1.5em;
+        }
+
+        &.page {
+            .title {
+                text-align: center;
+            }
+        }
+    }
+    .footer {
+        margin: 0 auto;
+        padding: 1em;
+        border-top: 1px solid #dbdbdb;
+        p {
+            color: #aaa;
+            font-size: 90%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
+a,
+a:focus,
+a:hover {
+    color: #235A9F;
+    outline: none;
+    text-decoration: none;
+}

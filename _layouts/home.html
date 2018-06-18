@@ -13,15 +13,17 @@
     <div class="content">
 
         {% include header.html %}
-        <section class="page post">
+        
+        {% for post in site.posts %}
+        <section class="post">
             <div class="title">
                 <h2>
-                    {{ page.title }}
+                    <a href="{{ post.url }}">{{ post.title }}</a>
                 </h2>
                 <p>
                     Posted on
-                    <a href="#">{{page.date}}</a> | By
-                    <a href="#">{{page.tags}}</a>
+                    <a href="#">{{post.date}}</a> | By
+                    <a href="#">{{post.tags}}</a>
                 </p>
             </div>
             <div class="description">
@@ -31,8 +33,9 @@
 
                 </p>
             </div>
-            {{content}}
         </section>
+        {% endfor %}
+        
         {% include footer.html %}
     </div>
 </body>
