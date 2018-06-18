@@ -5,6 +5,7 @@ plugins:
   - jemoji
 permalink: /:title
 timezone: Asia/Shanghai
+excerpt_separator: <!--more-->
 defaults:
   -
     scope:
