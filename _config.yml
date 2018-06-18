@@ -3,6 +3,8 @@ sass:
   style: compressed
 plugins:
   - jemoji
+permalink: /:title
+timezone: Asia/Shanghai
 defaults:
   -
     scope:
