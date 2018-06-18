@@ -1,0 +1,138 @@
+@import "normalize";
+// @import "github-markdown";
+// @import "./theme/syntax.colorful";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 0 20px 0px;
+    background: #3d3e45;
+}
+
+body{
+    font-family: -apple-system, Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", STXihei, "Microsoft YaHei", SimHei, "WenQuanYi Micro Hei";
+}
+
+header {
+    text-align: center;
+    padding: 16px 0;
+    h1 {
+        color: #f1f1f1;
+        font-size: 1.6em;
+        margin: .1em 0;
+    }
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    top: 60px;
+    left: 50%;
+    z-index: 99;
+    margin-left: calc(66vw * .5 + 30px - 100px);
+    height: calc(100vh - 100px);
+    overflow: scroll;
+    div {
+        padding-left: 12px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &.h1 {
+            font-size: 16px;
+            color: #d0d0d0;
+        }
+        &.h2 {
+            font-size: 15px;
+            padding-left: 28px;
+            color: #b0b0b0;
+        }
+        &.h3 {
+            font-size: 14px;
+            padding-left: 44px;
+            color: #909090;
+        }
+    }
+}
+
+section {
+    position: relative;
+    width: 66vw;
+    padding: 30px 30px 50px 30px;
+    margin: 0 auto;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    background: #fbfaf8;
+    border-radius: 3px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, .45);
+    min-height: calc(100vh - 200px);
+    .page-title {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: #bcb2a5;
+    }
+    &.page {
+        margin-top: 30px;
+    }
+    &.default {
+        width: 80vw;
+        -webkit-transform: none;
+        transform: none;
+    }
+    ul {
+        li {
+            margin: 20px 0;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #bbbbbb;
+    a {
+        color: #f0f0f0;
+    }
+}
+
+@media screen and(max-width: 1000px) {
+    header {
+        padding: 10px 0;
+    }
+    nav {
+        display: none;
+    }
+    section {
+        width: 80vw;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}

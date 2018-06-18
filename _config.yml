@@ -1,6 +1,6 @@
-title: Magician's Blog
-theme: jekyll-theme-fast
-remote_theme: liurongqing/jekyll-theme-fast
+title: 刘荣清's 博客
+sass:
+  style: compressed
 plugins:
   - jemoji
 defaults:
