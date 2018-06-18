@@ -1,8 +1,9 @@
 ---
 title: Nginx 开启 gzip 压缩
+tags: nginx
 ---
 
-gzip 配置
+:mouse: nginx 下开启 gzip 配置，及相关配置详细说明。
 <!--more-->
 
 ## 打开 Nginx 配置文件

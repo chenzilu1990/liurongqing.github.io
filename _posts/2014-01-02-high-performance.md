@@ -2,7 +2,7 @@
 title: 《高性能网站建设指南》笔记
 ---
 
-:sunny: 一些基本的优化方案，值得学习，参考。
+:hamster: 作者 Steve Souders，Yahoo 开发团队成员，介绍了网页性能的 14 条优化建议。
 <!--more-->
 
 ## 规则一：减少 HTTP 请求

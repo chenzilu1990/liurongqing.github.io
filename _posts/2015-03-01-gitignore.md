@@ -1,11 +1,12 @@
 ---
 title: .gitignore 文件详解
+tags: git
 ---
 
-.gitignore 配置
+:cow: git 常用忽略规则，创建 `.gitignore` 文件
 <!--more-->
 
-```json
+```bash
 # 根路径下的 node_modules 目录被忽略
 /node_modules
 

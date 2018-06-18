@@ -1,8 +1,9 @@
 ---
 title: 使用 jekyll + github 搭建免费博客指南
+tags: jekyll
 ---
 
-jekyll + github 开发
+:pig: 使用 github 的用户站点，创建库 username.github.io，然后将本地 jekyll 文件上传至该库 master 分支上，生产免费站点。
 <!--more-->
 
 Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项目的站点。 <br>
