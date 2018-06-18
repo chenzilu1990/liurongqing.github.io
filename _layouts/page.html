@@ -13,7 +13,7 @@
     <div class="content">
 
         {% include header.html %}
-        <section class="page post">
+        <section class="page post markdown-body">
             <div class="title">
                 <h2>
                     {{ page.title }}
@@ -21,16 +21,10 @@
                 <p>
                     Posted on
                     <a href="javascript:;">{{page.date | date: "%Y-%m-%d"}}</a> | By
-                    <a href="#">{{page.tags}}</a>
+                    <a href="/tag/{{page.tags}}">{{page.tags}}</a>
                 </p>
             </div>
-            <div class="description">
-                <p>
-
-                    {{post.excerpt}}
-
-                </p>
-            </div>
+            
             {{content}}
         </section>
         {% include footer.html %}

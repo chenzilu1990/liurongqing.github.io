@@ -24,12 +24,12 @@
                 <p>
                     Posted on
                     <a href="javascript:;">{{post.date | date: "%Y-%m-%d"}}</a> | By
-                    <a href="#">{{post.tags}}</a>
+                    <a href="/tag/{{post.tags}}">{{post.tags}}</a>
                 </p>
             </div>
             <div class="description">
                 <p>
-                    {{post.excerpt}}
+                    {{post.excerpt | remove: '<p>' | remove: '</p>'}}
                 </p>
             </div>
         </section>
