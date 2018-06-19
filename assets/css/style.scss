@@ -1,6 +1,5 @@
 ---
 --- 
-
 @import 'github-markdown';
 @import 'theme/syntax.github';
 html {
@@ -116,6 +115,11 @@ body {
             text-transform: uppercase;
         }
     }
+}
+
+#comments {
+    background: #ffffff;
+    padding: 20px;
 }
 
 .markdown-body {
