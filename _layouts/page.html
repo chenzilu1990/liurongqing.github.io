@@ -3,6 +3,8 @@
 
 <head>
     {% include head.html %}
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+
 </head>
 
 <body>
@@ -22,9 +24,24 @@
             </div>
             
             {{content}}
+
+            <div class="comments"></div>
         </section>
         {% include footer.html %}
     </div>
+    
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>var gitment = new Gitment({
+        id: window.location.pathname,
+        owner: 'liurongqing',
+        repo: 'liurongqing.github.io',
+        oauth: {
+          client_id: 'f6754cf0afae59e289ab',
+          client_secret: 'b837346bc15dd716cc905e393a0549aa478cb018'
+        }
+      })
+      gitment.render('comments');</script>
+
 </body>
 
 </html>
