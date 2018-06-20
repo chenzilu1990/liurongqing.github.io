@@ -1,5 +1,6 @@
 ---
 title: 《高性能网站建设指南》笔记
+tags: javascript
 ---
 
 :hamster: 作者 Steve Souders，Yahoo 开发团队成员，介绍了网页性能的 14 条优化建议。
