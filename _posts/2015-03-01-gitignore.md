@@ -1,5 +1,6 @@
 ---
 title: .gitignore 文件详解
+keywords: git, .gitignore, git 忽略文件
 tags: git
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: MathJax 使用 LaTeX 语法编写数学公式
+keywords: mathjax, latex
 tags: mathjax
 published: false
 ---

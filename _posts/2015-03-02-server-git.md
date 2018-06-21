@@ -1,5 +1,6 @@
 ---
 title: Centos 系统上创建 git 服务器端
+keywords: git, git 服务器端
 tags: git
 ---
 

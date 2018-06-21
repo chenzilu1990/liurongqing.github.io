@@ -1,5 +1,6 @@
 ---
 title: 《高性能网站建设指南》笔记
+keywords: 前端优化, 高性能前端
 tags: javascript
 ---
 

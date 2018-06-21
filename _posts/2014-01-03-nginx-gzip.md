@@ -1,5 +1,6 @@
 ---
 title: Nginx 开启 gzip 压缩
+keywords: nginx gzip, nginx, gzip
 tags: nginx
 ---
 

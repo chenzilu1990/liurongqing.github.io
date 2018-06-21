@@ -1,5 +1,6 @@
 ---
 title: 使用 jekyll + github 搭建免费博客指南
+keywords: jekyll github, 免费博客
 tags: jekyll
 ---
 
