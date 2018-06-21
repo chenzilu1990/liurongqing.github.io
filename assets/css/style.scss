@@ -17,7 +17,11 @@ body {
     font-size: 1.3em;
     color: #333;
     line-height: 1.42857143;
-    letter-spacing: 1px;
+    h1,
+    h2,
+    h3 {
+        letter-spacing: 1px;
+    }
 }
 
 .content {
@@ -130,6 +134,10 @@ body {
 
 .emoji {
     vertical-align: middle;
+}
+
+.none {
+    visibility: hidden;
 }
 
 a,
