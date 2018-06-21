@@ -3,7 +3,7 @@
 
 <head>
     {% include head.html %}
-    <link rel="stylesheet" href="{{ '/assets/css/gitment.css?v=' | append: site.github.build_revision}}">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
         {% include footer.html %}
     </div>
 
-    <script src="{{ '/assets/js/gitment.js?v=' | append: site.github.build_revision}}"></script>
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
         var gitment = new Gitment({
             id: window.location.pathname,
