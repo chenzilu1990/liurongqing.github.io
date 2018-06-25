@@ -1,19 +1,35 @@
-准备工作
-安装 git
-python 2.7及以上
-安装证书
-# 克隆库
-git clone https://github.com/certbot/certbot
+---
+title: 如何使用 Let's Encrypt 免费添加 HTTPS
+tags: linux
+keywords: encrypt, https, linux
+---
 
-# 进入安装生成数字证书和私钥文件
+:cow: 准备工作: 安装 git、python 2.7及以上、安装证书。
+<!--more-->
+
+## 克隆库
+```bash
+git clone https://github.com/certbot/certbot
+```
+
+## 进入安装生成数字证书和私钥文件
+```bash
 cd certbot
 ./certbot-auto certonly --standalone --email xx@163.com -d xx.com -d www.xx.com
+```
 
-# 安装成功以后会显示数字证书和私钥文件路径，类似下面这种的
+## 安装成功以后会显示数字证书和私钥文件路径，类似下面这种的
+```bash
 /etc/letsencrypt/live/xx.com/fullchain.pem; # 数字证书
 /etc/letsencrypt/live/liurongqing.com/privkey.pem; # 私钥文件
-配置 Nginx
-# vim /etc/nginx/conf.d/www.xx.com.conf
+
+```
+
+## 配置 Nginx
+
+vim /etc/nginx/conf.d/www.xx.com.conf
+
+```bash
 server {
   listen 443 ssl;
   server_name www.xx.com;
@@ -31,10 +47,12 @@ server {
     proxy_set_header Host $http_host;
     proxy_pass http://127.0.0.1:2368;
   }
-
 }
+```
 
-# 强制使用 https
+### 强制使用 https
+
+```bash
 server {
   listen 80;
   server_name www.xx.com xx.com;
@@ -45,15 +63,30 @@ server {
     proxy_pass http://127.0.0.1:2368;
   }
 }
-更新证书
-# 更新前需要关闭 nginx 服务
+```
+
+## 更新证书
+
+更新前需要关闭 nginx 服务
+
+```bash
 systemctl stop nginx.service
+```
 
-# 手动更新
+## 手动更新
+
+```bash
 ./certbot-auto renew
+```
 
-# 自动更新
+## 自动更新
+
+```bash
 ./certbot-auto renew --quiet
+```
 
-# 更新完开启 nginx 服务
+## 更新完开启 nginx 服务
+
+```bash
 systemctl start nginx.service
+```
