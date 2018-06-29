@@ -12,9 +12,10 @@
         
 
         let scrollHeight = de.scrollHeight  - de.clientHeight;
+        let scroll = 0;
         window.onscroll = function(){
-            progress.innerHTML = 'scrollTop: '+de.scrollTop;
-            document.querySelector('.footer').innerHTML = 'scrollTop: '+de.scrollTop;
+            // scroll = 
+            progress.innerHTML = 'scrollTop: '+document.documentElement.scrollTop;
             progress.style.width = (de.scrollTop / scrollHeight) * 100 + '%';
         }
 
