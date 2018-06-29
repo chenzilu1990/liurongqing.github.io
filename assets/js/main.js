@@ -11,7 +11,7 @@
         let scroll = 0;
         window.onscroll = function () {
             scroll = de.scrollTop || document.body.scrollTop;
-            progress.style.width = (scroll / scrollHeight) * 100 + '%';
+            progress.style.width = (scroll / scrollHeight) * 100 + 'vw';
         }
 
     }
