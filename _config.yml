@@ -1,5 +1,6 @@
 title: 刘荣清's 博客
 url: https://www.liurongqing.com
+host: 0.0.0.0
 sass:
   style: compressed
 plugins:
