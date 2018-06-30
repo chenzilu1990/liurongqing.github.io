@@ -13,8 +13,6 @@ html {
 html,
 body {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -23,6 +21,8 @@ body {
     font-size: 1.3em;
     color: #333;
     line-height: 1.42857143;
+    padding: 0;
+    margin: 0 10px;
     h1,
     h2,
     h3 {
@@ -31,7 +31,7 @@ body {
 }
 
 .content {
-    margin: 2.8em 1em;
+    margin: 2.8em auto;
     max-width: 860px;
     .header {
         height: 50px;
@@ -132,6 +132,8 @@ body {
     top: 0;
     width: 0;
     height: 3px;
+    margin-left: -10px;
+    margin-right: -10px;
     background: $text-primary;
 }
 
