@@ -1,6 +1,7 @@
 
 let CACHE_NAME = 'liurongqing-v2';
 let urlsToCache = [
+    '/',
     '/assets/css/style.css',
     '/assets/js/main.js',
     '/assets/images/favicon.ico',
