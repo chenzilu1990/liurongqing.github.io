@@ -1,5 +1,5 @@
 
-let CACHE_NAME = 'liurongqing-v2';
+let CACHE_NAME = 'liurongqing-v3';
 let urlsToCache = [
     '/',
     '/assets/css/style.css',
