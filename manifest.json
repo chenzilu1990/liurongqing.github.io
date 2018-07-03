@@ -6,8 +6,8 @@
     "background_color": "#333",
     "theme_color": "#5eace0",
     "icons":[{
-        "src": "/assets/images/logo.svg",
+        "src": "/assets/images/logo.png",
         "sizes": "144*144",
-        "type": "image/svg"
+        "type": "image/png"
     }]
 }
