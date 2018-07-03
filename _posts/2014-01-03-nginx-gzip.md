@@ -8,13 +8,13 @@ tags: nginx
 <!--more-->
 
 ## 打开 Nginx 配置文件
-```bash
+```shell
 # 如果是 CentOS 系统通过 yum 安装的话
 vim /etc/nginx/nginx.conf
 ```
 
 ## 修改配置（不存在则添加）
-```bash
+```shell
 # 开启 Gzip
 gzip on;
 
@@ -35,12 +35,12 @@ gzip_disable "MSIE [1-6]\.";
 ```
 
 ## 重启 Nginx
-```bash
+```shell
 systemctl restart nginx.service
 ```
 
 ## 用 curl 测试 Gzip 是否成功开启
-```bash
+```shell
 # 测试页面压缩 
 curl -I -H "Accept-Encoding: gzip, deflate" "http://www.xxx.com/"
 

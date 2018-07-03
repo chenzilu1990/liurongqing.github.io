@@ -55,7 +55,7 @@ CDN 用于发布静态内容，如图片、脚本、样式表等 <br>
 
 1. 设置 Expires 头缓存到期时间 HTTP 1.0 及以上可使用 <br>
     _Nginx 以下配置会同时生成 `Expires` 头与 `Cache-Control`：_
-    ```bash
+    ```shell
     location ~ .*\.(gif|jpg|jpeg|png|bmp)$ {
         expires 30d;
     }
@@ -66,7 +66,7 @@ CDN 用于发布静态内容，如图片、脚本、样式表等 <br>
     ```
 2. 设置 Cache-Control 使用 max-age 指定缓存时间，秒为单位 HTTP 1.1 及以上可使用 <br>
     _Nginx 配置 生成 `Cache-Control`:_
-    ```bash
+    ```shell
     location ~ .*\.(gif|jpg|jpeg|png|bmp)$ {
         add_header Cache-Control  max-age=3600;
     }

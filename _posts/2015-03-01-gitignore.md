@@ -7,7 +7,7 @@ tags: git
 :cow: git 常用忽略规则，创建 `.gitignore` 文件
 <!--more-->
 
-```bash
+```shell
 # 根路径下的 node_modules 目录被忽略
 /node_modules
 

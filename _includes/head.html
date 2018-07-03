@@ -2,18 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="baidu-site-verification" content="lnAGh26Mv4" />
-<meta name="keywords" content="{{page.keywords}}">
-{% if page.excerpt %}
-<meta name="description" content="{{page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines}}">
-{% else %}
-<meta name="description" content="{{page.content}}">
-{% endif %}
+<meta name="keywords" content="{{page.keywords}}"> {% if page.excerpt %}
+<meta name="description" content="{{page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines}}"> {% else %}
+<meta name="description" content="{{page.content}}"> {% endif %}
 
 <title>{{page.title}}</title>
 <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico'}}" type="image/x-icon">
-<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision}}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css'}}">
 
-<script async src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision}}"></script>
+<script async src="{{ '/assets/js/main.js'}}"></script>
 
 <script>
     var _hmt = _hmt || [];
@@ -37,4 +34,3 @@
 
     gtag('config', 'UA-98680431-1');
 </script>
-
