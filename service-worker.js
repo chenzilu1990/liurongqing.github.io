@@ -12,14 +12,15 @@ let resToCache = [
     '/assets/images/logo.svg',
 ];
 
-let cache_list = pageToCache.concat(resToCache);
+// let cache_list = pageToCache.concat(resToCache);
 
 // 安装
 self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(function (cache) {
-                return cache.addAll(cache_list);
+                cache.addAll(pageToCache);
+                return cache.addAll(resToCache);
             })
     );
 });
