@@ -1,0 +1,13 @@
+{
+    "name": "Zero's Blog",
+    "short_name": "Zero's Blog",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#333",
+    "theme_color": "#5eace0",
+    "icons":[{
+        "src": "/assets/images/logo.svg",
+        "sizes": "144*144",
+        "type": "image/svg"
+    }]
+}
