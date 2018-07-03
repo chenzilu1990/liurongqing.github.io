@@ -2,7 +2,6 @@
 title: MathJax 使用 LaTeX 语法编写数学公式
 keywords: mathjax, latex
 tags: mathjax
-published: false
 ---
 
 :wolf: MathJax是一种可以在网页显示数学公式的插件，本章主要介绍 MathJax 如何使用 LaTeX 语法编写数学公式。
