@@ -46,7 +46,7 @@ self.addEventListener('activate', function (event) {
 // 提取
 self.addEventListener('fetch', function (event) {
 
-    if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') {
+    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
         return;
     }
 
