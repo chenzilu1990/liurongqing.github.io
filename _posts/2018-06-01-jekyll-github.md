@@ -23,7 +23,7 @@ Github Pages 有 2 种站点，一种是用户或组织的站点，一种是项�
 
 > 安装 git（macOS自带，没有则安装）
 
-```bash
+```shell
 # 安装 git
 brew install git
 
@@ -33,7 +33,7 @@ git --version # git version 2.5.4 (Apple Git-61)
 
 > 安装 ruby（mac自带，没有则安装）
 
-```bash
+```shell
 
 # 删除macOS自带的 ruby 引用
 sudo rm -rf /usr/bin/ruby
@@ -65,7 +65,7 @@ sudo gem update --system
 
 > 安装 jekyll
 
-```bash
+```shell
 
 # 安装 jekyll 
 gem install jekyll
@@ -137,13 +137,13 @@ title: 标题
 直接克隆主题，然后在 `_posts` 目录中写内容 <br>
 缺点：不好更新主题
 
-```bash
+```shell
 git clone https://github.com/liurongqing/jekyll-theme-fast.git
 ```
 
 ## 安装更新 Gemfile 包
 
-```bash
+```shell
 bundle install
 
 # 要经常执行这个命令，更新库文件
@@ -152,7 +152,7 @@ bundle update
 
 ## 预览项目
 
-```bash
+```shell
 
 # 开启服务实时监听
 jekyll serve
@@ -163,7 +163,7 @@ http://127.0.0.1:4000
 
 
 ## 本地项目关联到 github 上
-```bash
+```shell
 # 初始化 git
 git init
 

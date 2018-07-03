@@ -17,7 +17,7 @@
     }
 
     // service worker 开启
-    if ('serviceWorker' in navigator) {
+    if (!isLocalhost() && ('serviceWorker' in navigator)) {
         window.addEventListener('load', function () {
             navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
                 // Registration was successful
@@ -27,5 +27,14 @@
                 console.log('ServiceWorker registration failed: ', err);
             });
         });
+    }
+
+    function isLocalhost() {
+        let hostname = location.hostname;
+        if (hostname.search('127.0.0.1') > -1 || hostname.search('localhost') > -1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 })()

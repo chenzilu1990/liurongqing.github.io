@@ -8,7 +8,7 @@ tags: git
 <!--more-->
 
 ## 检查并安装 git
-```bash
+```shell
 # 查看 git 是否已经安装
 git --version
 
@@ -23,7 +23,7 @@ git --version
 ```
 
 ## 服务器端创建 git 仓库
-```bash
+```shell
 # 创建仓库
 cd /git/  
 git init --bare pdf.git
@@ -45,7 +45,7 @@ chown -R git:git pdf.git/
 ### post-update 钩子
 1、进入 git 库的 hooks 目录中，并重命名 post-update.sample 为 post-update
 
-```bash
+```shell
 cd /git/blogpdf.git/hooks
 
 # copy 一份 post-update 文件
@@ -60,7 +60,7 @@ chmod +x post-update
 
 2、在服务器上创建 git 库
 
-```bash
+```shell
 cd /blog/core/www/static  
 git clone /git/blogpdf.git
 
@@ -70,7 +70,7 @@ chown git:git blogpdf
 
 3、post-update 内容
 
-```bash
+```shell
 # 每次本地提交时，服务器要自动 pull 更新的 git 库路径
 pdfPath="/blog/core/www/static/blogpdf"  
 cd $pdfPath  

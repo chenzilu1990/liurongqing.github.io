@@ -14,7 +14,7 @@ keywords: crontab, linux
 ## crontab 说明
 \* \* \* \* \*  command
 
-```bash
+```shell
 分 时 天 月 周 命令
 
 第 1 列表示分钟 1～59 每分钟用 * 或者 */1 表示
@@ -26,7 +26,7 @@ keywords: crontab, linux
 ```
 
 ## 常用 `crontab` 命令
-```bash
+```shell
 crontab -l # 查看当前用户计划任务  
 crontab -e # 编辑当前用户计划任务  
 crontab -d # 删除当前用户计划任务
@@ -36,7 +36,7 @@ crontab -d # 删除当前用户计划任务
 > /usr/local/php/bin/php是php的bin路径，可以用which php来查询 <br>
 > /home/www/getData.php是要执行的php的绝对路径
 
-```bash
+```shell
 crontab -e  
 00 03 */3 * * /usr/local/php/bin/php /home/www/getData.php  
 ```
@@ -45,13 +45,13 @@ crontab -e
 > /bin/sh是sh的bin路径，可以用which sh来查询 <br>
 > /home/www/backupSql.sh是要执行的sh脚本的绝对路径
 
-```bash
+```shell
 crontab -e  
 00 02 */2 * * /bin/sh /home/www/backupSql.sh
 ```
 
 ## backupSql.sh 的内容
-```bash
+```shell
 #/bin/bash
 mysql_host="localhost";  
 mysql_user="root";  

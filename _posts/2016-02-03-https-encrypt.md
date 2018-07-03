@@ -8,18 +8,18 @@ keywords: encrypt, https, linux
 <!--more-->
 
 ## 克隆库
-```bash
+```shell
 git clone https://github.com/certbot/certbot
 ```
 
 ## 进入安装生成数字证书和私钥文件
-```bash
+```shell
 cd certbot
 ./certbot-auto certonly --standalone --email xx@163.com -d xx.com -d www.xx.com
 ```
 
 ## 安装成功以后会显示数字证书和私钥文件路径，类似下面这种的
-```bash
+```shell
 /etc/letsencrypt/live/xx.com/fullchain.pem; # 数字证书
 /etc/letsencrypt/live/liurongqing.com/privkey.pem; # 私钥文件
 
@@ -29,7 +29,7 @@ cd certbot
 
 vim /etc/nginx/conf.d/www.xx.com.conf
 
-```bash
+```shell
 server {
   listen 443 ssl;
   server_name www.xx.com;
@@ -52,7 +52,7 @@ server {
 
 ### 强制使用 https
 
-```bash
+```shell
 server {
   listen 80;
   server_name www.xx.com xx.com;
@@ -69,24 +69,24 @@ server {
 
 更新前需要关闭 nginx 服务
 
-```bash
+```shell
 systemctl stop nginx.service
 ```
 
 ## 手动更新
 
-```bash
+```shell
 ./certbot-auto renew
 ```
 
 ## 自动更新
 
-```bash
+```shell
 ./certbot-auto renew --quiet
 ```
 
 ## 更新完开启 nginx 服务
 
-```bash
+```shell
 systemctl start nginx.service
 ```

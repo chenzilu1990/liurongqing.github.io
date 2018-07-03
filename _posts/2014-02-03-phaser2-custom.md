@@ -21,20 +21,20 @@ tags: phaser
 > 官方最后发布 phaser 是 2.6.2 版本，不再维护，人力资源全使用在 Phaser 3 上 <br>
 > 我们使用的是CE(Community Edition)社区版本，由开源社区维护更新及升级
 
-```bash
+```shell
 git clone https://github.com/photonstorm/phaser-ce.git
 ```
 
 ## 安装 Grunt
 
-```bash
+```shell
 npm install -g grunt-cli  
 npm install --save-dev grunt
 ```
 
 ## 安装依赖模块
 
-```bash
+```shell
 npm install
 ```
 
@@ -46,7 +46,7 @@ npm install
 
 1. 不需要游戏手柄及键盘的话，可不打包这模块
 
-    ```bash
+    ```shell
     grunt custom --exclude gamepad,keyboard
     ```
 2. 自定义名称 [`--filename`]
@@ -55,14 +55,14 @@ npm install
 
     注意：文件名不要加 `.js` 后缀
 
-    ```bash
+    ```shell
     grunt custom --exclude gamepad --filename phaser-plane
     ```
 3. 是否需要 sourcemap 文件 [--sourcemap]
 
     需要 sourcemap 文件
 
-    ```bash
+    ```shell
     grunt custom --exclude gamepad --sourcemap true
     ```
 
@@ -70,7 +70,7 @@ npm install
     
     默认为 false
 
-    ```bash
+    ```shell
     grunt custom --exclude gamepad --uglify true
     ```
 
@@ -80,30 +80,30 @@ npm install
 
     默认为 false
 
-    ```bash
+    ```shell
     grunt custom --exclude gamepad --split true
     ```
 
 6. 系统自带的 4 个构建方式
     1. 完整版本包括所有功能
 
-        ```bash
+        ```shell
         grunt full
         ```
     2. 包括 Arcade Physics、Tilemaps、Particle的支持，不包括 P2 Physics 与 Ninja Physics 的支持
 
-        ```bash
+        ```shell
         grunt arcadephysics
         ```
     3. 不包括任何物理引擎、Tilemap 与 Particle
 
-        ```bash
+        ```shell
         grunt nophysics
         ```
 
     4. 最基本的架构部分及 PIXI 和 UMD 封装，经过 js 压缩 及 gzip 压缩以后，只有 `85kb` 左右
 
-        ```bash
+        ```shell
         grunt minimum 
         ```
 
