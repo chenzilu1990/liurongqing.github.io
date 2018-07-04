@@ -6,9 +6,21 @@
 <meta name="description" content="{{page.excerpt | remove: '<p>' | remove: '</p>' | strip_newlines}}"> {% else %}
 <meta name="description" content="{{page.content}}"> {% endif %}
 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Zero's Blog">
+<link rel="apple-touch-icon" href="{{'/assets/images/logo.png'}}">
+
+
 <title>{{page.title}}</title>
 <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico'}}" type="image/x-icon">
 <link rel="stylesheet" href="{{ '/assets/css/style.css'}}">
+
+<link rel="manifest" href="{{ '/manifest.json'}}">
+
+
+
 
 <script async src="{{ '/assets/js/main.js'}}"></script>
 
