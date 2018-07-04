@@ -228,4 +228,38 @@ self.addEventListener('fetch', function (event) {
     );
 }
 
+
+## 支持 PWA
+
+1. 创建 `manifest.json`，在页面上引入
+
+    ```json
+    {
+        "name": "Zero's Blog",
+        "short_name": "Zero's Blog",
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#333",
+        "theme_color": "#5eace0",
+        "icons":[{
+            "src": "/assets/images/logo.png",
+            "sizes": "144*144",
+            "type": "image/png"
+        }]
+    }
+    ```
+    ```html
+    <link rel="manifest" href="{{ '/manifest.json'}}">
+    ```
+
+
+2. `safari` 不支持 `manifest.json` 可以在 head 中配置些信息即可
+
+    ```html
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Zero's Blog">
+    <link rel="apple-touch-icon" href="{{'/assets/images/logo.png'}}">
+    ```
+
 ```
