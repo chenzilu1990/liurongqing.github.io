@@ -10,20 +10,32 @@
     <div class="content">
 
         {% include header.html %}
-        <section class="page post markdown-body">
-            <div class="title">
-                <h2>
-                    {{ page.title }}
-                </h2>
-                <p>
-                    Posted on
-                    <a href="javascript:;">{{page.date | date: "%Y-%m-%d"}}</a> | By
-                    <a href="/tag/{{page.tags}}">{{page.tags}}</a>
-                </p>
+
+        <div class="post-box">
+            <div class="menu">
+                <div class="menu-affix">
+                    <div>123</div>
+                    <div>123</div>
+                    <div>123</div>
+                    <div>123</div>
+                </div>
             </div>
 
-            {{content}}
-        </section>
+            <section class="page post markdown-body">
+                <div class="title">
+                    <h2>
+                        {{ page.title }}
+                    </h2>
+                    <p>
+                        Posted on
+                        <a href="javascript:;">{{page.date | date: "%Y-%m-%d"}}</a> | By
+                        <a href="/tag/{{page.tags}}">{{page.tags}}</a>
+                    </p>
+                </div>
+
+                {{content}}
+            </section>
+        </div>
 
         <div id="comments"></div>
         {% include footer.html %}
@@ -40,7 +52,7 @@
                 client_secret: 'b837346bc15dd716cc905e393a0549aa478cb018'
             }
         })
-          gitment.render('comments');
+        gitment.render('comments');
     </script>
 </body>
 

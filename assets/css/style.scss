@@ -81,6 +81,28 @@ body {
             min-height: calc(100vh - 280px);
         }
     }
+
+
+    .post-box{
+        display: flex;
+    }
+
+    .menu {
+        width: 200px;
+        height: 100vh;
+        margin-top: 3em;
+        margin-right: 20px;
+        display: none;
+        .menu-affix{
+            position: fixed;
+            width: inherit;
+            height: inherit;
+            padding-left: 10px;
+            padding-top: 10px;
+            background: #fff;
+        }
+    }
+
     .post {
         background: #fff;
         border-radius: 3px;
@@ -112,11 +134,13 @@ body {
             line-height: 1.5em;
         }
         &.page {
+            flex: 1;
             .title {
                 text-align: center;
             }
         }
     }
+
     .footer {
         margin: 0 auto;
         padding: 1em;
@@ -165,4 +189,13 @@ a:hover {
     color: $text-primary;
     outline: none;
     text-decoration: none;
+}
+
+@media screen and(max-width: 1000px) {
+    .content {
+        .menu {
+            display: none;
+        }
+    }
+    
 }
