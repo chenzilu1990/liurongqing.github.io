@@ -10,11 +10,6 @@ html {
     font-size: 10px;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #F2F2F2;
@@ -31,10 +26,12 @@ body {
 }
 
 .content {
-    margin: 2.8em auto;
+    margin: 0 auto;
     max-width: 860px;
+
     .header {
         height: 50px;
+        margin-top: 2.8em;
         display: flex;
         a {
             display: block;
@@ -76,6 +73,12 @@ body {
             &.active {
                 color: $text-primary;
             }
+        }
+    }
+    .box {
+        min-height: calc(100vh - 240px);
+        &.tag {
+            min-height: calc(100vh - 280px);
         }
     }
     .post {

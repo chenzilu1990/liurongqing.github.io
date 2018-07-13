@@ -8,31 +8,33 @@
 <body>
     <div class="content">
 
-        {% include header.html %}
+        {% include header.html %} {% include tag.html %}
 
-        {% include tag.html %}
+        <div class="box tag">
+            {% for post in site.tags[page.tags] %}
+            <section class="post">
+                <div class="title">
+                    <h2>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <p>
+                        Posted on
+                        <a href="javascript:;">{{post.date | date: "%Y-%m-%d"}}</a> | By
+                        <a href="javascript:;">{{post.tags}}</a>
+                    </p>
+                </div>
+                <div class="description">
+                    <p>
 
-        {% for post in site.tags[page.tags] %}
-        <section class="post">
-            <div class="title">
-                <h2>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </h2>
-                <p>
-                    Posted on
-                    <a href="javascript:;">{{post.date | date: "%Y-%m-%d"}}</a> | By
-                    <a href="javascript:;">{{post.tags}}</a>
-                </p>
-            </div>
-            <div class="description">
-                <p>
+                        {{post.excerpt}}
 
-                    {{post.excerpt}}
+                    </p>
+                </div>
+            </section>
 
-                </p>
-            </div>
-        </section>
-        {% endfor %} {% include footer.html %}
+            {% endfor %}
+        </div>
+        {% include footer.html %}
     </div>
 </body>
 
