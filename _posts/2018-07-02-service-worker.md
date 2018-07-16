@@ -261,5 +261,3 @@ self.addEventListener('fetch', function (event) {
     <meta name="apple-mobile-web-app-title" content="Zero's Blog">
     <link rel="apple-touch-icon" href="{{'/assets/images/logo.png'}}">
     ```
-
-```
