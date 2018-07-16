@@ -227,7 +227,7 @@ self.addEventListener('fetch', function (event) {
         ...
     );
 }
-
+```
 
 ## 支持 PWA
 
