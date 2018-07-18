@@ -28,6 +28,7 @@
             for (let i = aTitles.length; i >= 0; i--) {
                 if (scroll > aTitles[i] - 20) {
                     if (activeIndex !== i) {
+                        
                         toItem(oMenuItem[i]);
                         activeIndex = i;
                     }
