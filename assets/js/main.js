@@ -1,7 +1,7 @@
 (function () {
 
     window.onload = function () {
-        let activeIndex = 0;
+        let activeIndex = -1;
         let progress = document.createElement('div');
         progress.className = 'progress';
         document.body.appendChild(progress);
