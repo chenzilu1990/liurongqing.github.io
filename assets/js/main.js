@@ -16,25 +16,35 @@
 
         let oTitles = document.querySelectorAll('h2,h3');
         let oMenuItem = document.querySelectorAll('.menu div');
-        let aTitles = [];
+        let aTitles = [0];
         for (let i = 1, len = oTitles.length; i < len; i++) {
             aTitles.push(oTitles[i].offsetTop);
         }
 
         window.scrollBy(0, 1);
 
+        let dt = null;
+
         window.onscroll = function () {
             scroll = de.scrollTop || document.body.scrollTop;
-            for (let i = aTitles.length; i >= 0; i--) {
-                if (scroll > aTitles[i] - 20) {
-                    if (activeIndex !== i) {
-                        
-                        toItem(oMenuItem[i]);
-                        activeIndex = i;
-                    }
-                    return;
-                }
+
+            if (typeof dt === 'number') {
+                clearTimeout(dt);
             }
+
+            dt = setTimeout(() => {
+                for (let i = aTitles.length - 1; i >= 0; i--) {
+                    if (scroll > (aTitles[i] - 10)) {
+                        if (activeIndex !== i) {
+                            toItem(oMenuItem[i - 1]);
+                            activeIndex = i;
+                        }
+                        return;
+                    }
+                }
+            }, 200);
+
+
 
 
             progress.style.width = Math.ceil((scroll / scrollHeight) * 100) + 'vw';
@@ -94,6 +104,7 @@ function addMenu() {
 
 
 function toItem(target) {
+
     // 移除所有类
     let oMenuItem = document.querySelectorAll('.menu div');
     for (let i = 0, len = oMenuItem.length; i < len; i++) {
@@ -101,5 +112,5 @@ function toItem(target) {
     }
 
     // 添加当前类
-    target.classList.add('active');
+    target && target.classList.add('active');
 }
