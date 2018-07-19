@@ -9,7 +9,7 @@
         progress.className = 'progress';
         document.body.appendChild(progress);
 
-        oMenuItem.length > 0 && addMenu();
+        addMenu();
 
         let de = document.documentElement;
 
@@ -82,6 +82,9 @@
 
 function addMenu() {
     let oMenu = document.querySelector('.menu');
+    if(!oMenu){
+        return false;
+    }
     let oNavs = document.querySelectorAll('h2,h3');
 
     let aNavs = [], sNavs = '', aText = '', showText = '', nodeName;

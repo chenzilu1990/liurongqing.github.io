@@ -1,5 +1,5 @@
 
-let CACHE_NAME = 'liurongqing-v2018-07-20';
+let CACHE_NAME = 'liurongqing-v2018-07-21';
 
 // 页面文件
 let pageToCache = ["/high-performance", "/nginx-gzip", "/yahoo-35", "/phaser2-custom", "/linux-crontab", "/css-rect", "/gitignore", "/server-git", "/shortcuts", "/vscode", "/https-encrypt", "/gulp", "/git-use", "/linux-all", "/nvm", "/gogs", "/scss", "/ghost", "/mnmp", "/mac-software", "/jekyll-github", "/react-1", "/react-2", "/phaser-2048-1", "/phaser-2048-2", "/phaser-2048-3", "/phaser-2048-4", "/phaser-2048-5", "/phaser-2048-6","/service-worker"];
