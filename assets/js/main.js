@@ -13,7 +13,8 @@
         let scrollHeight = de.scrollHeight - de.clientHeight;
         let scroll = 0;
 
-
+        let oTitles = document.querySelectorAll('h2,h3');
+        let oMenuItem = document.querySelectorAll('.menu div');
         
         let aTitles = [0];
         for (let i = 1, len = oTitles.length; i < len; i++) {
@@ -23,9 +24,6 @@
         window.scrollBy(0, 1);
 
         let dt = null;
-
-        let oTitles = document.querySelectorAll('h2,h3');
-        let oMenuItem = document.querySelectorAll('.menu div');
 
         window.onscroll = function () {
             scroll = de.scrollTop || document.body.scrollTop;
