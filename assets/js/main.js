@@ -1,9 +1,6 @@
 (function () {
 
     window.onload = function () {
-        let oTitles = document.querySelectorAll('h2,h3');
-        let oMenuItem = document.querySelectorAll('.menu div');
-
         let activeIndex = -1;
         let progress = document.createElement('div');
         progress.className = 'progress';
@@ -27,6 +24,9 @@
 
         let dt = null;
 
+        let oTitles = document.querySelectorAll('h2,h3');
+        let oMenuItem = document.querySelectorAll('.menu div');
+
         window.onscroll = function () {
             scroll = de.scrollTop || document.body.scrollTop;
 
@@ -47,9 +47,6 @@
                     }
                 }, 200);
             }
-
-
-
 
             progress.style.width = Math.ceil((scroll / scrollHeight) * 100) + 'vw';
         }
