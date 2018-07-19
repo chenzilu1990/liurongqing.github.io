@@ -1,12 +1,15 @@
 (function () {
 
     window.onload = function () {
+        let oTitles = document.querySelectorAll('h2,h3');
+        let oMenuItem = document.querySelectorAll('.menu div');
+
         let activeIndex = -1;
         let progress = document.createElement('div');
         progress.className = 'progress';
         document.body.appendChild(progress);
 
-        addMenu();
+        oMenuItem.length > 0 && addMenu();
 
         let de = document.documentElement;
 
@@ -14,8 +17,7 @@
         let scroll = 0;
 
 
-        let oTitles = document.querySelectorAll('h2,h3');
-        let oMenuItem = document.querySelectorAll('.menu div');
+        
         let aTitles = [0];
         for (let i = 1, len = oTitles.length; i < len; i++) {
             aTitles.push(oTitles[i].offsetTop);
@@ -32,17 +34,19 @@
                 clearTimeout(dt);
             }
 
-            dt = setTimeout(() => {
-                for (let i = aTitles.length - 1; i >= 0; i--) {
-                    if (scroll > (aTitles[i] - 10)) {
-                        if (activeIndex !== i) {
-                            toItem(oMenuItem[i - 1]);
-                            activeIndex = i;
+            if (oMenuItem.length > 0) {
+                dt = setTimeout(() => {
+                    for (let i = aTitles.length - 1; i >= 0; i--) {
+                        if (scroll > (aTitles[i] - 10)) {
+                            if (activeIndex !== i) {
+                                toItem(oMenuItem[i - 1]);
+                                activeIndex = i;
+                            }
+                            return;
                         }
-                        return;
                     }
-                }
-            }, 200);
+                }, 200);
+            }
 
 
 
