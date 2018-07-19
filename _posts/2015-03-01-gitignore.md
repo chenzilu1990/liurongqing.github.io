@@ -4,7 +4,7 @@ keywords: git, .gitignore, git 忽略文件
 tags: git
 ---
 
-:cow: git 常用忽略规则，创建 `.gitignore` 文件
+:cow: git 常用忽略规则，创建 .gitignore 文件。
 <!--more-->
 
 ```shell
