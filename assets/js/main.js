@@ -35,7 +35,7 @@
             if (oMenuItem.length > 0) {
                 dt = setTimeout(() => {
                     for (let i = aTitles.length - 1; i >= 0; i--) {
-                        if (scroll > (aTitles[i] - 10)) {
+                        if (scroll > (aTitles[i] - 20)) {
                             if (activeIndex !== i) {
                                 toItem(oMenuItem[i - 1]);
                                 activeIndex = i;
