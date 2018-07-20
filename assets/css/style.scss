@@ -259,3 +259,14 @@ a:hover {
         }
     }
 }
+
+@media screen and(min-width: 1600px) {
+    .content {
+        max-width: 70vw;
+        .menu {
+            left: 50%;
+            margin-left: calc(35vw + 20px);
+        }
+    }
+    
+}
