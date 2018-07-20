@@ -5,6 +5,8 @@ sass:
   style: compressed
 plugins:
   - jemoji
+  - jekyll-paginate
+paginate: 10
 permalink: /:title
 timezone: Asia/Shanghai
 excerpt_separator: <!--more-->

@@ -28,6 +28,19 @@
             {{content}}
         </section>
 
+        <div class="page-paginator">
+            <div class="page-prev">
+                {% if page.next %}
+                    <a href="{{page.next.url}}"> &laquo; {{page.next.title}}</a>
+                {% endif %}
+            </div>
+            <div class="page-next">
+                {% if page.previous %}
+                    <a href="{{page.previous.url}}">{{page.previous.title}} &raquo; </a>
+                {% endif %}
+            </div>
+        </div>
+
         <div id="comments"></div>
         {% include footer.html %}
     </div>

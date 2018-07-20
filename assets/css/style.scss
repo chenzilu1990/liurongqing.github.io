@@ -211,6 +211,47 @@ a:hover {
     text-decoration: none;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+    border-radius: 4px;
+    a,em,span{
+        padding: 6px 12px;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-left: -1px;
+    }
+    em {
+        background: #337ab7;
+        border-color: #337ab7;
+        color: #fff;
+        cursor: default;
+    }
+}
+
+.page-paginator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    padding: 2em 1em;
+    background: #fff;
+    > div {
+        flex: 1;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &.page-prev{
+            margin-right: 2em;
+        }
+        &.page-next{
+            margin-left: 2em;
+            text-align: right;
+        }
+    }
+}
+
 @media screen and(max-width: 1200px) {
     .content {
         .menu {
