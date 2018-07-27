@@ -14,55 +14,6 @@
 
 ## 计划功能
 
-未完成
-
-- [ ] fetch 超时处理
-- [ ] service worker(pwa) sw-precache-webpack-plugin offline-plugin
-- [ ] http-server
-- [ ] favicon.ico 添加
-
-已完成
-
-
-
-
-- [x] Skeleton Screen（骨架屏占位动画）
-    > https://github.com/danilowoz/react-content-loader#options
-    > https://github.com/ElemeFE/page-skeleton-webpack-plugin
-
-- [x] 默认无数据状态填充
-- [x] react-router 4
-- [x] 异步加载
-- [x] 终端适配（使用 vw vh + flexbox）
-- [x] vscode 转单位插件（px2vw）
-- [x] redux 放弃使用
-- [x] eslint stylelint 以 airbnb 为规范
-- [x] 引入 ramda.js
-- [x] 标题配置化
-- [x] iconfont 字体
-- [x] jest 测试
-
-
-开发工具使用
-[react-devtools](https://github.com/facebook/react-devtools)
-
-
-
-使用 React + Webpack + TypeScript 搭建可持续项目（二）（ hello world ）
-
-webpack + react + typescript
-
-
-创建目录结构 
-
-
-引入 
-    引入 webpack webpack-cli webpack-dev-server
-    引入 react react-dom @types-react @types-react-dom 
-    引入 typescript 
-    引入  htmlwebpackplugin 
-
-
 
 使用 React + Webpack + TypeScript 搭建可持续项目（三）（ 路由配置 ）
 
@@ -96,7 +47,7 @@ webpack + react + typescript
 使用 React + Webpack + TypeScript 搭建可持续项目（九）（ PWA 实现 ）
 
     
-    service-worker
+    service-worker sw-precache-webpack-plugin offline-plugin
     link 配置
 
 
