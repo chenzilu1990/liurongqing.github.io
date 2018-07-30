@@ -15,7 +15,17 @@
 
 [React 框架系列](https://www.liurongqing.com/tag/react/)
 
-[JavaScript 相关文章](https://www.liurongqing.com/tag/react/)
+[JavaScript 相关文章](https://www.liurongqing.com/tag/javascript/)
 
 [CSS 相关文章](https://www.liurongqing.com/tag/css/)
+
+[前端书籍](https://www.liurongqing.com/tag/book/)
+
+[Git 相关文章](https://www.liurongqing.com/tag/git/)
+
+[Linux 相关文章](https://www.liurongqing.com/tag/linux/)
+
+[Mac 相关文章](https://www.liurongqing.com/tag/mac/)
+
+[工具相关文章](https://www.liurongqing.com/tag/tool/)
 
