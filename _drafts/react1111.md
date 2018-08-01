@@ -15,29 +15,13 @@
 ## 计划功能
 
 
-使用 React + Webpack + TypeScript 搭建可持续项目（三）（ 路由配置 ）
-
-使用 React + Webpack + TypeScript 搭建可持续项目（四）（ 静态资源解析处理 ）
-
-    html、scss（全局与模块内）、图片、iconfont
-
-使用 React + Webpack + TypeScript 搭建可持续项目（五）（ 标题配置自动化 ）
-
-    context api 实现标题配置自动化
-
 使用 React + Webpack + TypeScript 搭建可持续项目（六）（简单例子演示）
 
     fetch.js
-    services
-    components
-    controllers
-    
+    service
+    component
+    container
 
-
-使用 React + Webpack + TypeScript 搭建可持续项目（七）（ 发布配置 ）
-    本地调试
-    发测试
-    发生产
 
 使用 React + Webpack + TypeScript 搭建可持续项目（八）（ 代码风格规范化 ）
     js eslint .eslintrc
@@ -46,7 +30,6 @@
 
 使用 React + Webpack + TypeScript 搭建可持续项目（九）（ PWA 实现 ）
 
-    
     service-worker sw-precache-webpack-plugin offline-plugin
     link 配置
 
