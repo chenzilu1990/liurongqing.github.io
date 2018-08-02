@@ -23,11 +23,6 @@
     container
 
 
-使用 React + Webpack + TypeScript 搭建可持续项目（八）（ 代码风格规范化 ）
-    js eslint .eslintrc
-    css stylelint .stylelintrc
-    .editorconfig
-
 使用 React + Webpack + TypeScript 搭建可持续项目（九）（ PWA 实现 ）
 
     service-worker sw-precache-webpack-plugin offline-plugin
