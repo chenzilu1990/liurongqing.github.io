@@ -23,13 +23,9 @@
     container
 
 
-使用 React + Webpack + TypeScript 搭建可持续项目（九）（ PWA 实现 ）
-
-    service-worker sw-precache-webpack-plugin offline-plugin
-    link 配置
-
-
 使用 React + Webpack + TypeScript 搭建可持续项目（十）（ jest 测试 ）
+
+Jest 和 Enzyme 的基本介绍
 
 
 
