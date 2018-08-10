@@ -2,7 +2,41 @@
 
 ### 名词短语
 
+#### 定义
+
+名词短语 = 名词 + 修饰语
+
+修饰语（定语或前置定语） + 名词
+
+名词 + 修饰语（后置定语）
+
+#### 例子
+
+1. _<u>The **boy**</u> is my brother. (限定词 + 名词)
+2. _<u>The cute **boy**</u> is my brother._ (限定词 + 形容词 + 名词)
+3. _<u>The cute **boy** in blue jeans</u> is my brother. (限定词 + 形容词 + 名词 + 介词短语)
+4. _<u>The cute **boy** wearing blue jeans</u> is my brother._ (限定词 + 形容词 + 名词 + 分词短语)
+5. _<u>The cute **boy** who is wearing blue jeans</u> is my brother. (限定词 + 形容词 + 名词 + 定语从句)
+
+#### 左二右六规律
+
+$$
+限定词 + 形容词 + 名词 + 六类右置定语 
+\begin{vmatrix}
+介词短语 \\
+分词短语 \\
+不定式短语 \\
+形容词短语 \\
+定语从句 \\
+同位语从句 \\
+ \end{vmatrix}
+$$
+
+
+
 ### 英语句子五成分论
+
+"主谓宾定状补" 为六大句子成分，而 "定语" 用来修饰或限定名词，故属于 "短语成分"。
 
 
 
@@ -133,5 +167,6 @@
 1. _<u>**There red roses**</u> are for you._ (这些红玫瑰是送给你的)（名词短语）
 2. _I have <u>**three close friends**</u>._ (我有三个要好的朋友)（名词短语）
 3. _I really nned <u>**a new computer**</u>._ (我确实很需要一台新电脑)（名词短语）
-4. _He is <u>**my best friend**</u>._ (他是我最好的朋友)（）
+4. _He is <u>**my best friend**</u>._ (他是我最好的朋友)（名词短语）
+5. _There are <u>**some red roses**</u> on <u>**that small table**</u>._ (在那张小餐桌上有一些红玫瑰)（名词短语）
 
