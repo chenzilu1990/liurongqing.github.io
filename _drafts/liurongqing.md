@@ -46,11 +46,11 @@
 
 <small>喜爱 MacOS 系统，5年使用熟练度，熟练使用各种软件常用命令及快捷键。</small>
 
+<small>业余开发H5小游戏、微信小程序、微信小程序游戏。</small>
+
 <small>了解 Angular、Vue、React Native 框架。</small>
 
 <small>了解 Egret、Phaser、Cocos2d、LayaBox、Three.js 游戏框架。</small>
-
-
 
 
 #### 项目经验
@@ -65,7 +65,7 @@
 
 2. 平安科技有限公司 `(前端负责人)` `(2017.01)`
 
-    | 项目                    | 链接                                                       | 技能                     |
+    | 项目             | 链接                                                       | 技能                     |
     | ----------------------- | ---------------------------------------------------------- | ------------------------ |
     | 平安证券 APP 里资产配置 | [首页地址](https://asset.stock.pingan.com/mobile/map.html) | React、Webpack、Jenkins、SCSS |
     | 平安科技智能投顾        | [首页地址](https://pyxis.pingan.com/login/home)            | 1. create-react-app、redux<br />2. ESLint、stylelint<br />3. ES 6、Ramda、PWA<br />4. SCSS、CSS 模块化 |
