@@ -44,9 +44,9 @@
 
 <small>配置 ESLint(Airbnb 规范)、stylelint(standard 规范) 及严格遵守规范。</small>
 
-<small>喜爱 MacOS 系统，5年使用熟练度，熟练使用各种软件常用命令及快捷键。</small>
+<small>喜爱 MacOS 系统，5 年使用熟练度，熟练使用各种软件常用命令及快捷键。</small>
 
-<small>业余开发H5小游戏、微信小程序、微信小程序游戏。</small>
+<small>业余开发微信网页小游戏、微信小程序、微信小程序游戏。</small>
 
 <small>了解 Angular、Vue、React Native 框架。</small>
 
@@ -92,7 +92,7 @@
    | -------------------------- | -------- | ------------------------------------------------------------ |
    | 会议室预定系统             | 内部使用 | jQuery、Bootstrap                                            |
    | 读书会网站                 | 内部使用 | ThinkCMF、jQuery                                             |
-   | 多个内容管理系统开发与维护 | 无       | 1. 基于 ThinkCMF 搭建后台管理系统。<br />2. Bootstrap 编写响应式界面<br />3. jQuery、页面兼容至 IE7 |
+   | 多个内容管理系统开发与维护 | 无       | 1. 基于 ThinkCMF 搭建后台管理系统<br />2. Bootstrap 编写响应式界面<br />3. jQuery、页面兼容至 IE7 |
 
 #### 教育经历
 
@@ -118,5 +118,5 @@
 
 5. 兴趣爱好
 
-   <small>钓鱼、羽毛球、乒乓球、台球、王者荣耀</small>
+   <small>钓鱼、羽毛球、乒乓球、台球、王者荣耀。</small>
 
