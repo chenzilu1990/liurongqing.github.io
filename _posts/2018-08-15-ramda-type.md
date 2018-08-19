@@ -711,6 +711,84 @@ truncate('0123456789ABC'); // => '0123456789...
 
 ## 函数（ Function ）
 
+### addIndex
+
+> 为迭代函数的回调函数添加当前索引和整个列表参数
+
+```javascript
+const mapIndexed = R.addIndex(R.map);
+mapIndexed((val, idx) => idx + '-' + val, ['a', 'b', 'c']);
+// => ['0-a', '1-b', '2-c']
+```
+
+### always
+
+> 返回恒定的函数，类似 `const`
+
+```javascript
+const t = R.always('Tee');
+t(); // => 'Tee'
+```
+
+### ap
+
+> 将数组列表各自作用于函数上，最后连接起来
+
+```javascript
+R.ap([R.multiply(2), R.add(3)], [1, 2, 3]); // => [2, 4, 6, 4, 5, 6]
+R.ap([R.concat('t '), R.toUpper], ['a', 'b']); // => ['t a', 't b', 'A', 'B']
+
+R.ap(R.concat, R.toUpper)('Ramda'); // => 'RamdaRAMDA'
+```
+
+### apply
+
+> 与原生类似
+
+```javascript
+const nums = [1, 2, 33, 4, 5];
+R.apply(Math.max, nums); // => 33
+```
+
+### applySpec
+
+> 接受一个属性值为函数的对象，返回结构相同的对象
+
+```javascript
+const getMetrics = R.applySpec({
+    sum: R.add,
+    nested: { nul: R.multiply }
+});
+
+getMetrics(2, 4); // => { sum: 6, nested: { mul: 8 } }
+```
+
+### applyTo
+
+> 给定一个值，作用于不同函数
+
+```javascript
+const t10 = R.applyTo(10);
+t10(R.identity); // => 10
+t10(R.add(1)); // => 11
+```
+
+### ascend
+
+> 创建升序函数
+
+```javascript
+const byAge = R.ascend(R.prop('age'));
+const people = [
+    // ...
+];
+const peopleByYoungestFirst = R.sort(byAge, people);
+```
+
+### binary
+
+> 将
+
 ## 数组列表（ List ）
 
 ## 对象（ Object ）
