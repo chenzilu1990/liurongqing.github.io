@@ -711,9 +711,515 @@ truncate('0123456789ABC'); // => '0123456789...
 
 ## 函数（ Function ）
 
+
+### bind
+
+### call
+
+### comparator
+
+### compose
+
+### composeK
+
+### composeP
+
+### construct
+
+### constructN
+
+### converge
+
+### curry
+
+### curryN
+
+### descend
+
+### empty
+
+### F
+
+### flip
+
+### identity
+
+### invoker
+
+### juxt
+
+### lift
+
+### liftN
+
+### memoize
+
+### memoizeWith
+
+### module.exports
+
+### nAry
+
+### nthArg
+
+### o
+
+### of
+
+### once
+
+### partial
+
+### partialRight
+
+### pipe
+
+### pipeK
+
+### pipeP
+
+### T
+
+### tap
+
+### tryCatch
+
+### unapply
+
+### unary
+
+### uncurryN
+
+### useWith
+
+
 ## 数组列表（ List ）
 
+### adjust
+
+### all
+
+### any
+
+### aperture
+
+### append
+
+### chain
+
+### concat
+
+### contains
+
+### drop
+
+### dropLast
+
+### dropLastWhile
+
+### dropRepeats
+
+### dropRepeatsWith
+
+### dropWhile
+
+### endsWith
+
+### filter
+
+### find
+
+### findIndex
+
+### findLast
+
+### findLastIndex
+
+### flatten
+
+### forEach
+
+### fromPairs
+
+### groupBy
+
+### groupWith
+
+### head
+
+### indexBy
+
+### indexOf
+
+### init
+
+### insert
+
+### insertAll
+
+### intersperse
+
+### into
+
+### join
+
+### last
+
+### lastIndexOf
+
+### length
+
+### map
+
+### mapAccum
+
+### mapAccumRight
+
+### mergeAll
+
+### none
+
+### nth
+
+### pair
+
+### partition
+
+### pluck
+
+### prepend
+
+### range
+
+### reduce
+
+### reduceBy
+
+### reduced
+
+### reduceRight
+
+### reduceWhile
+
+### reject
+
+### remove
+
+### repeat
+
+### reverse
+
+### scan
+
+### sequence
+
+### slice
+
+### sort
+
+### splitAt
+
+### splitEvery
+
+### splitWhen
+
+### startsWith
+
+### tail
+
+### take
+
+### takeLast
+
+### takeLastWhile
+
+### takeWhile
+
+### times
+
+### transduce
+
+### transpose
+
+### traverse
+
+### unfold
+
+### uniq
+
+### uniqBy
+
+### uniqWith
+
+### unnest
+
+### update
+
+### without
+
+### xprod
+
+### zip
+
+### zipObj
+
+### zipWith
+
 ## 对象（ Object ）
+
+### keys
+
+### assoc
+
+### assocPath
+
+### clone
+
+### dissoc
+
+### dissocPath
+
+### eqProps
+
+### evolve
+
+### forEachObjIndexed
+
+### has
+
+### hasIn
+
+### invert
+
+### invertObj
+
+### keysIn
+
+### lens
+
+### lensIndex
+
+### lensPath
+
+### lengsProp
+
+### mapObjIndexed
+
+### merge
+
+### mergeDeepLeft
+
+### mergeDeepRight
+
+### mergeDeepWith
+
+### mergeDeepWithKey
+
+### mergeWith
+
+### mergeWithKey
+
+### objOf
+
+### omit
+
+### over
+
+### path
+
+> 取出给定路径上的值
+
+```javascript
+R.path(['a', 'b'], { a: { b: 2 }}); // => 2
+R.path(['a', 'b'], { c: { b: 2}}); // => undefined
+```
+
+### pathEq
+
+> 过滤列表中的值
+
+```javascript
+const user1 = { address: { zipCode: 90210 } };
+const user2 = { address: { zipCode: 55555 } };
+const user3 = [ name: 'Bob' ];
+const users = [ user1, user2, user3 ];
+const isFamous = R.pathEq(['address', 'zipCode'], 90210);
+R.filter(isFamous, users); // => [ user1 ]
+```
+
+### pathOr
+
+> 不存在返回默认值
+
+```javascript
+R.pathOr('N/A', ['a', 'b'], { a: { b: 2}}); // => 2
+R.pathOr('N/A', ['a', 'b'], { c: { b: 2}}); // => 'N/A'
+```
+
+### pick
+
+> 返回对象部分拷贝，键不存在则忽略
+
+```javascript
+R.pick(['a', 'd'], { a: 1, b: 2, c: 3, d: 4}); // => { a: 1, d: 4}
+R.pick(['a', 'e', 'f'], { a: 1, b: 2, c: 3, d: 4}); // => { a: 1 }
+```
+
+### pickAll
+
+> 与 `pick` 类似，不存在用 `key: undeinfed` 返回
+
+```javascript
+R.pickAll(['a', 'd'], { a: 1, b: 2, c: 3, d: 4}); // => {a: 1, d: 4}
+R.pickAll(['a', 'e', 'f' ], { a: 1, b: 2, c: 3, d: 4}); // => { a: 1, e: undefined, f: undefined}
+```
+
+### pickBy
+
+> 与 `pick` 类似，满足条件返回
+
+```javascript
+const isUpperCase = (val, key) => key.toUpperCase() === key;
+R.pickBy(isUpperCase, { a: 1, b: 2, A: 3, B: 4}); // => { A: 3, B: 4}
+```
+
+### project
+
+> 模拟 SQL 中的 `select` 语句
+
+```javascript
+const abby = { name: 'abby', age: 7 };
+const fred = { name: 'fred', age: 11};
+const kids = [abby, fred];
+R.project(['name'], kids);
+// => [{ name: 'abby' }, {name: 'fred' }]
+```
+
+### prop
+
+> 取出对象中指定属性的值，不存在返回 `undefined`
+
+```javascript
+R.prop('x', { x: 100 }); // => 100
+R.prop('x', {}); // => undefined
+```
+
+### propOr
+
+> 存在返回，不存在返回默认值
+
+```javascript
+const alice = {
+    name: 'ALICE',
+    age: 101
+};
+
+const favorite = R.prop('favoriteLibrary');
+const favoriteWithDefault = R.propOr('Ramda', 'favoriteLibrary');
+
+favorite(alice); // => undefined
+favoriteWithDefault(alice); // => 'Ramda'
+```
+
+### props
+
+> 返回 `prop` 的数组下的值
+
+```javascript
+R.props(['x', 'y'], {x: 1, y: 2}); // => [1, 2]
+R.props(['c', 'a', 'b'], { b: 2, a: 1}); // => [undefined, 1, 2]
+
+const fullName = R.compose(R.join(' '), R.props(['first', 'last']));
+fullName({last: 'Bullet-Tooth', age: 33, first: 'Tony'}); // Tony Bullet-Tooth
+```
+
+### set
+
+> 对指定值进行设置
+
+```javascript
+const xLens = R.lensProp('x');
+
+R.set(xLens, 4, { x: 1, y: 2}); // => {x: 4, y: 2}
+R.set(xLens, 8, { x: 1, y: 2}); // => {x: 8, y: 2}
+```
+
+### toPairs
+
+> 将键值转成数组
+
+```javascript
+R.toPairs({a: 1, b: 2, c: 3});
+// => [['a', 1], ['b', 2], ['c', 3]]
+```
+
+### toPairsIn
+
+> 与 `toPairs` 类似，包括原型链上的值
+
+```javascript
+const F = function () { this.x = 'X'; };
+F.prototype.y = 'Y';
+
+const f = new F();
+R.toPairsIn(f);
+// => [['x', 'X'], ['y', 'Y']]
+```
+
+### values
+
+> 值的集合
+
+```javascript
+R.values({a: 1, b: 2, c: 3}); // [1, 2, 3]
+```
+
+### valuesIn
+
+> 与 `values` 类似，包括原型链上的值
+
+```javascript
+const F = function() { this.x = 'X'; };
+F.prototype.y = 'Y';
+
+const f = new F();
+R.valuesIn(f); // => ['X', 'Y']
+```
+
+### view
+
+> 返回数据中指定字段
+
+```javascript
+const xLens = R.lensProp('x');
+
+R.view(xLens, {x: 1, y: 2}); // => 1
+R.view(xLens, {x: 4, y: 2}); // => 4
+```
+
+### where
+
+> 多条件满足则返回 `true`
+
+```javascript
+const pred = R.where({
+    a: R.equals('foo'),
+    x: R.gt(R.__, 10),
+});
+
+pred({a: 'foo', x: 11}); // true
+```
+
+### whereEq
+
+> 多条件满足则返回 `true`， `where` 的一种特殊形式
+
+```javascript
+const pred = R.whereEq({a: 1, b: 2});
+
+pred({a: 1}); // => false
+pred({a: 1, b: 2}); // => true
+```
 
 
 
