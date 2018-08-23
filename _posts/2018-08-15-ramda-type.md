@@ -969,37 +969,212 @@ truncate('0123456789ABC'); // => '0123456789...
 
 ### keys
 
+> 返回 `key` 的集合
+
+```javascript
+R.keys({ a: 1, b: 2, c: 3}); // => ['a', 'b', 'c']
+```
+
 ### assoc
+
+> 浅复制，然后设置或覆盖指定属性
+
+```javascript
+R.assoc('c', 3, { a: 1, b: 2 }); // { a: 1, b: 2, c: 3}
+```
 
 ### assocPath
 
+> 指定路径，设置或覆盖指定属性
+
+```javascript
+R.assocPath(['a', 'b', 'c'], 42, { a: { b: { c: 0}}}); // => {a: { b: { c: 42}}}
+R.assocPath(['a', 'b', 'c'], 42, { a: 5 }); // => {a: { b: { c: 42}}}
+```
+
 ### clone
+
+> 深拷贝
+
+```javascript
+const o = [{}, {}, {}];
+const OC = R.clone(o);
+
+o === OC; // => false
+o[0] === OC[0]; // => false
+```
 
 ### dissoc
 
+> 删除属性
+
+```javascript
+R.dissoc('b', { a: 1, b: 2, c: 3}); // => { a: 1, c: 3 }
+```
+
 ### dissocPath
+
+> 浅复制对象，删除指定路径上的属性
+
+```javascript
+R.dissocPath(['a', 'b', 'c'], { a: { b: { c: 42}}}); // => { a: { b: {}}}
+```
 
 ### eqProps
 
+> 通过 `R.equals` 判断属性值是否相等
+
+```javascript
+const o1 = { a: 1, b: 2 };
+const o2 = { a: 3, b: 2};
+
+R.eqProps('a', o1, o2); // => false
+R.eqProps('b', o1, o2); // => true
+```
+
 ### evolve
+
+> 根据条件对对象进行处理
+
+```javascript
+const tomato = { firstName: ' Tomato ', data: { elapsed: 100, remaining: 1400}};
+
+const transformations = {
+    firstName: R.trim,
+    lastName: R.trim,
+    data: { elapsed: R.add(1), remaining: R.add(-1)}
+}
+
+R.evolve(transformations, tomato);
+```
 
 ### forEachObjIndexed
 
+> 遍历 `object` 函数接受三个参数：(value, key, obj)
+
+```javascript
+const print = (value, key) => console.log(key + ':' + value);
+R.forEachObjIndexed(print, { x: 1, y: 2}); // => { x: 1, y: 2 }
+
+// logs x: 1
+// logs y: 2
+```
+
 ### has
+
+> 对象自身是否含有指定的属性
+
+```javascript
+const hasName = R.has('name');
+hasName({ name: 'alice' }); // => true
+hasName({}); // => false
+
+const point = { x: 0, y: 0 };
+const pointHas = R.has(R.__, point);
+
+pointHas('x'); // => true
+pointHas('y'); // => true
+pointHas('z'); // => false
+```
 
 ### hasIn
 
+> 与 `has` 类似，不同在于 `hasIn` 包括原型链上
+
+```javascript
+function Test(width) {
+    this.width = width;
+}
+
+Test.prototype.height = function(){
+    return this.width * .5;
+}
+
+const T = new Test(2);
+R.hasIn('width', T); // => true
+R.hasIn('height', T); // => true
+```
+
 ### invert
+
+> 键值交换，多个值则放在数组中
+
+```javascript
+const race = {
+    first: 'alice',
+    second: 'jake',
+    third: 'alice'
+};
+
+R.invert(race); 
+// => { 'alice': ['first', 'third'], 'jake': ['second']}
+```
 
 ### invertObj
 
+> 与 `invertObj` 类似，键值交换，多个值取最后一个
+
+```javascript
+const race = {
+    first: 'alice',
+    second: 'jake',
+    third: 'alice'
+};
+
+R.invertObj(race); 
+// => { 'alice': 'third', 'jake': ['second']}
+```
+
 ### keysIn
+
+> 与 `keys` 类似，不同在于 `keysIn` 包括原型链
+
+```javascript
+const F = function() { this.x = 'X' };
+F.prototype.y = 'Y';
+
+const f = new F();
+R.keysIn(f); // => ['x', 'y']
+```
 
 ### lens
 
+> 返回封装给定的 `getter` 和 `setter`
+
+```javascript
+const xLens = R.lens(R.prop('x'), R.assoc('x'));
+
+R.view(xLens, {x: 1, y: 2});            //=> 1
+R.set(xLens, 4, {x: 1, y: 2});          //=> {x: 4, y: 2}
+R.over(xLens, R.negate, {x: 1, y: 2});  //=> {x: -1, y: 2}
+```
+
 ### lensIndex
 
+> 返回聚集到指定索引的 `lens`
+
+```javascript
+const headLens = R.lensIndex(0);
+
+R.view(headLens, ['a', 'b', 'c']);            //=> 'a'
+R.set(headLens, 'x', ['a', 'b', 'c']);        //=> ['x', 'b', 'c']
+R.over(headLens, R.toUpper, ['a', 'b', 'c']); //=> ['A', 'b', 'c']
+```
+
 ### lensPath
+
+> 返回聚焦到指定路径的 `lens`
+
+```javascript
+const xHeadYLens = R.lensPath(['x', 0, 'y']);
+
+R.view(xHeadYLens, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
+//=> 2
+R.set(xHeadYLens, 1, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
+//=> {x: [{y: 1, z: 3}, {y: 4, z: 5}]}
+R.over(xHeadYLens, R.negate, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
+//=> {x: [{y: -2, z: 3}, {y: 4, z: 5}]}
+```
 
 ### lengsProp
 
