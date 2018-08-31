@@ -55,6 +55,14 @@ tags: mac
 
 <br>
 
+## MindNode
+
+> 脑图工具
+
+[https://mindnode.com/](https://mindnode.com/)
+
+<br>
+
 ## SwitchHosts
 
 > 开发、生产等不同环境，可快速切换 host 管理工具
