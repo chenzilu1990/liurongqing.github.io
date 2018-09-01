@@ -787,9 +787,30 @@ const peopleByYoungestFirst = R.sort(byAge, people);
 
 ### binary
 
-> 将
+> 将多元函数转成二元函数
+
+```javascript
+const takesThreeArgs = function(a, b, c) {
+  return [a, b, c];
+};
+takesThreeArgs.length; //=> 3
+takesThreeArgs(1, 2, 3); //=> [1, 2, 3]
+
+const takesTwoArgs = R.binary(takesThreeArgs);
+takesTwoArgs.length; //=> 2
+// Only 2 arguments are passed to the wrapped function
+takesTwoArgs(1, 2, 3); //=> [1, 2, undefined]
+```
 
 ### bind
+
+> 创建一个绑定上下文的函数
+
+```javascript
+const log = R.bind(console.log, console);
+R.pipe(R.assoc('a', 2), R.tap(log), R.assoc('a', 3))({a: 1}); //=> {a: 3}
+// logs {a: 2}
+```
 
 ### call
 
@@ -1255,27 +1276,139 @@ R.over(xHeadYLens, R.negate, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
 
 ### lengsProp
 
+> 返回聚焦到指定属性
+
+```javascript
+const xLens = R.lensProp('x');
+
+R.view(xLens, {x: 1, y: 2});            //=> 1
+R.set(xLens, 4, {x: 1, y: 2});          //=> {x: 4, y: 2}
+R.over(xLens, R.negate, {x: 1, y: 2});  //=> {x: -1, y: 2}
+```
+
 ### mapObjIndexed
+
+> 与 `map` 多 2 个参数，(value, key, obj)
+
+```javascript
+const values = { x: 1, y: 2, z: 3 };
+const prependKeyAndDouble = (num, key, obj) => key + (num * 2);
+
+R.mapObjIndexed(prependKeyAndDouble, values); //=> { x: 'x2', y: 'y4', z: 'z6' }
+```
 
 ### merge
 
+> 合并，不包括原型链，重复取后一个值
+
+```javascript
+R.merge({ 'name': 'fred', 'age': 10 }, { 'age': 40 });
+//=> { 'name': 'fred', 'age': 40 }
+
+var resetToDefault = R.merge(R.__, {x: 0});
+resetToDefault({x: 5, y: 2}); //=> {x: 0, y: 2}
+```
+
 ### mergeDeepLeft
+
+> 与 `merge` 类似，继续合并值为对象的，重复值取第一个
+
+```javascript
+R.mergeDeepLeft(
+    { name: 'fred', age: 10, contact: { email: 'moo@example.com' }},
+    { age: 40, contact: { email: 'baa@example.com' }}
+);
+//=> { name: 'fred', age: 10, contact: { email: 'moo@example.com' }}
+```
 
 ### mergeDeepRight
 
+> 与 `merge` 类似，继续合并值为对象的，重复值取最后一个
+
+```javascript
+R.mergeDeepRight(
+    { name: 'fred', age: 10, contact: { email: 'moo@example.com' }},
+    { age: 40, contact: { email: 'baa@example.com' }}
+);
+//=> { name: 'fred', age: 40, contact: { email: 'baa@example.com' }}
+```
+
 ### mergeDeepWith
+
+> 与 `merge` 类似，通过函数处理重复值
+
+```javascript
+R.mergeDeepWith(R.concat,
+    { a: true, c: { values: [10, 20] }},
+    { b: true, c: { values: [15, 35] }});
+//=> { a: true, b: true, c: { values: [10, 20, 15, 35] }}
+```
 
 ### mergeDeepWithKey
 
+> 对 `key` 和对应的两个值进行处理
+
+```javascript
+const concatValues = (k, l, r) => k == 'values' ? R.concat(l, r) : r
+R.mergeDeepWithKey(concatValues,
+    { a: true, c: { thing: 'foo', values: [10, 20] }},
+    { b: true, c: { thing: 'bar', values: [15, 35] }});
+//=> { a: true, b: true, c: { thing: 'bar', values: [10, 20, 15, 35] }}
+```
+
 ### mergeWith
+
+> 类似 `mergeDeepWith`
+
+```javascript
+R.mergeWith(R.concat,
+    { a: true, values: [10, 20] },
+    { b: true, values: [15, 35] });
+//=> { a: true, b: true, values: [10, 20, 15, 35] }
+```
 
 ### mergeWithKey
 
+> 类似 `mergeDeepWithKey`
+
+```javascript
+const concatValues = (k, l, r) => k == 'values' ? R.concat(l, r) : r
+R.mergeWithKey(concatValues,
+    { a: true, thing: 'foo', values: [10, 20] },
+    { b: true, thing: 'bar', values: [15, 35] });
+//=> { a: true, b: true, thing: 'bar', values: [10, 20, 15, 35] }
+```
+
 ### objOf
+
+> 包含单个键值对的对象
+
+```javascript
+const matchPhrases = R.compose(
+  R.objOf('must'),
+  R.map(R.objOf('match_phrase'))
+);
+matchPhrases(['foo', 'bar', 'baz']); 
+//=> {must: [{match_phrase: 'foo'}, {match_phrase: 'bar'}, {match_phrase: 'baz'}]}
+```
 
 ### omit
 
+> 批量删除属性
+
+```javascript
+R.omit(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {b: 2, c: 3}
+```
+
 ### over
+
+> 对指定值进行函数变换
+
+```javascript
+const headLens = R.lensIndex(0);
+R.over(headLens, R.toUpper, ['foo', 'bar', 'baz']); 
+//=> ['FOO', 'bar', 'baz']
+```
 
 ### path
 
