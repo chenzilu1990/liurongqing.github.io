@@ -814,15 +814,40 @@ R.pipe(R.assoc('a', 2), R.tap(log), R.assoc('a', 3))({a: 1}); //=> {a: 3}
 
 ### call
 
+> 第一个参数为函数，其他参数为函数的参数
+
+```javascript
+R.call(R.add, 1, 2); // 3
+```
+
 ### comparator
+
+> 首个参数是否小于第二个参数
+
+```javascript
+const byAge = R.comparator((a, b) => a.age < b.age );
+```
 
 ### compose
 
+> 从右到左执行
+
+```javascript
+R.compose(Math.abs, R.add(1), R.multiply(2))(-4) //=> 7
+```
+
 ### composeK
+
+> 同 `compose` 类似，`R.composeK(h, g, f)` 等同于 `R.compose(R.chain(h)，R.chain(g)，f)`。
 
 ### composeP
 
+> 最右边函数可以是任意元，其余函数必须是一元函数
+
 ### construct
+
+> 将构造函数封装进柯里化函数，新函数与原构造函数的传入参数类型及返回值类型相同。
+
 
 ### constructN
 

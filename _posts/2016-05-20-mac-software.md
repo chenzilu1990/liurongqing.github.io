@@ -173,3 +173,11 @@ tags: mac
 > 保护眼睛缓解疲劳
 
 [https://justgetflux.com/](https://justgetflux.com/)
+
+## 工具
+
+### autojump
+
+> 快速进入
+
+[https://github.com/wting/autojump][https://github.com/wting/autojump]
