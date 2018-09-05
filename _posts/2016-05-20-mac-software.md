@@ -178,6 +178,6 @@ tags: mac
 
 ### autojump
 
-> 快速进入
+> 快速进入目录或找到文件
 
 [https://github.com/wting/autojump][https://github.com/wting/autojump]
