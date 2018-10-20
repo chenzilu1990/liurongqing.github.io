@@ -1,14 +1,14 @@
-<center><h3>资深前端开发工程师 - 刘荣清</h3></center>
+<center><h3>前端开发工程师 - 刘荣清</h3></center>
 
 #### 基本信息
 
 - 个人信息
 
-   <small>大专 - 计算机网络技术 - 6 年工作经验 - 男 - 1990</small>
+   <small>**大专** - **计算机网络技术** - **6 年**工作经验 - 男 - 1990</small>
 
 - 期望
 
-  <small>资深前端开发工程师 - 税前 30 k - 深圳</small>
+  <small>前端开发工程师 - 税前 30 k - 深圳</small>
 
 - 联系方式
 
@@ -40,7 +40,7 @@
 
 <small>掌握 ThinkPHP、Koa2 后台框架。</small>
 
-<small>掌握前端各种优化方案。</small>
+<small>熟练使用前端性能优化方案。</small>
 
 <small>配置 ESLint(Airbnb 规范)、stylelint(standard 规范) 及严格遵守规范。</small>
 
@@ -57,42 +57,42 @@
 
 1. 开源项目
 
-    | 项目              | 链接                                                         | 功能        |
-    | ----------------- | ------------------------------------------------------------ | ----------- |
-    | px2vw             | [github 地址](https://github.com/liurongqing/px2vw)<br />[插件地址](https://marketplace.visualstudio.com/items?itemName=liurongqing.px2vw) | VSCode 插件<br />根据设计稿将 px 转成 vw，实现适配。 |
-    | mao-cli           | [github 地址](https://github.com/liurongqing/mao-cli)<br />[插件地址](https://www.npmjs.com/package/mao-cli)            | npm 包<br />cli 脚手架生成不同项目模版。 |
-    | jekyll-theme-fast | [github 地址](https://github.com/liurongqing/jekyll-theme-fast)<br />[插件地址](https://rubygems.org/gems/jekyll-theme-fast)                      | gem 包<br />简单实用的 jekyll-theme-fast 主题 |
+    | 项目              | 类型        | 功能                       | 链接                                                         |
+    | ----------------- | ----------- | -------------------------- | ------------------------------------------------------------ |
+    | px2vw             | VSCode 插件 | 将 px 转成 vw，实现适配    | [github 地址](https://github.com/liurongqing/px2vw)<br />[插件地址](https://marketplace.visualstudio.com/items?itemName=liurongqing.px2vw) |
+    | mao-cli           | npm 包      | cli 脚手架生成不同项目模版 | [github 地址](https://github.com/liurongqing/mao-cli)<br />[插件地址](https://www.npmjs.com/package/mao-cli) |
+    | jekyll-theme-fast | gem 包      | jekyll 主题                | [github 地址](https://github.com/liurongqing/jekyll-theme-fast)<br />[插件地址](https://rubygems.org/gems/jekyll-theme-fast) |
 
-2. 平安科技有限公司 `(前端负责人)` `(2017.01)`
+2. 平安科技有限公司 `(前端架构` `(2017.01)`) (前端 5 人)
 
-    | 项目             | 链接                                                       | 技能                     |
-    | ----------------------- | ---------------------------------------------------------- | ------------------------ |
-    | 平安证券 APP 里资产配置 | [首页地址](https://asset.stock.pingan.com/mobile/map.html) | React、Webpack、Jenkins、SCSS |
-    | 平安科技智能投顾        | [首页地址](https://pyxis.pingan.com/login/home)            | 1. create-react-app、redux<br />2. ESLint、stylelint<br />3. ES 6、Ramda、PWA<br />4. SCSS、CSS 模块化 |
-    | 平安科技智能投顾后台    | 无                                                         | Ant Design Pro           |
+    | 项目         | 简介                                                         | 任务与结果                                                   | 主要技能                                                     |
+    | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | 资产配置     | 平安证券APP内嵌的 H5 项目<br />[项目地址](https://m.stock.pingan.com/spss-aa/mobile/map.html) | 使用 React + Webpack + ES 6 方式搭建模块化式开发并持续优化性能。<br />1. 团队负责不同模块提升开发效率<br />2. 减少 Bug 率<br />3. 减少开发环境、生产环境打包及运行时间。 | React、ES 6、Webpack、Jenkins、SCSS、Git、VSCode             |
+    | 智能投顾     | 智能资产配置<br />[项目地址](https://pyxis.pingan.com/login/home) | 使用 create-react-app 搭建并释放配置进行功能修改与优化。<br />1. 使用容器与展示组件模型。<br />2. 快速定位 UI 或 数据问题。<br />3. 配置 Webpack 支持 CSS 模块化。<br />4. 设置代理解决本地调试跨域问题等优化。 | create-react-app、ESLint、stylelint、Webpack、ES6、Ramda、SCSS |
+    | 智能投顾后台 | 智能投顾后台管理平台。                                       | 由原来后端维护的 EasyUI 后台重构，使用 Ant Design Pro 快速搭建后台，并由前端来维护。<br />1. 具有更好的用户体验，更方便的操作<br />2. 前端可以更快迭代开发功能<br />3. 后端只需专注于数据。 | Ant Design Pro、React、Webpack、dva、TypeScript              |
 
 
 3. 深圳市魅族科技有限公司 `(2015.06)`
 
-   | 项目           | 链接                                                         | 技能                                                         |
-   | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-   | meizu 官网     | [官网地址](https://www.meizu.com/)                           | 1. FIS 改装后的框架<br />2. Git<br />3. HTML5、CSS3          |
-   | 魅友家官网     | [官网地址](http://myj.meizu.com/)                            | 1. jQuery 配合相关插件开发界面<br />2. Ajax 对接接口<br />3. SVN |
-   | 营销小游戏开发 | [圣诞节图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3411534042240_.pic.jpg)<br />[春晚图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3421534042240_.pic.jpg)<br />[母亲节图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3431534042240_.pic.jpg) | 1. 圣诞节 Cocos2d-JS、Gulp、SVN<br />2. 春晚 HTML5、CSS3、JavaScript、Gulp、SVN<br />3. 母亲节 HTML3、CSS3、JavaScript、Gulp、SVN<br />4. 摇你魅 Cocos2d-JS、Gulp、SVN<br /> |
+   | 项目           | 简介                                                         | 任务与结果   | 主要技能                                                     |
+   | -------------- | ------------------------------------------------------------ | ------------ | ------------------------------------------------------------ |
+   | meizu 官网     | [官网地址](https://www.meizu.com/)                           | 开发新品页面 | HTML5、CSS5、jQuery、Git                                     |
+   | 魅友家官网     | [官网地址](http://myj.meizu.com/)                            | 搭建展示网站 | HTML5、CSS5、jQuery、SVN                                     |
+   | 营销小游戏开发 | [圣诞节图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3411534042240_.pic.jpg)<br />[春晚图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3421534042240_.pic.jpg)<br />[母亲节图片](https://sqa-res.oss-cn-beijing.aliyuncs.com/resume/3431534042240_.pic.jpg) | 营销吸粉游戏 | 1. 圣诞节 Cocos2d-JS、Gulp、SVN<br />2. 春晚 HTML5、CSS3、JavaScript、Gulp、SVN<br />3. 母亲节 HTML3、CSS3、JavaScript、Gulp、SVN<br />4. 摇你魅 Cocos2d-JS、Gulp、SVN<br /> |
 
 4. 深圳市软通动力科技有限公司 `(2014.02)`
 
-   | 项目                | 链接 | 技能                 |
-   | ------------------- | ---- | -------------------- |
-   | iPad 版智能社区开发 |    无  | Angular1.x、Require、gulp |
+   | 项目                | 简介 | 任务与结果 | 主要技能                  |
+   | ------------------- | ---- | ---------- | ------------------------- |
+   | iPad 版智能社区开发 |      |            | Angular1.x、Require、gulp |
 
 5. 中国科学院微生物研究所 `(2012.06)`
 
-   | 项目                       | 链接     | 技能                                                         |
-   | -------------------------- | -------- | ------------------------------------------------------------ |
-   | 会议室预定系统             | 内部使用 | jQuery、Bootstrap                                            |
-   | 读书会网站                 | 内部使用 | ThinkCMF、jQuery                                             |
-   | 多个内容管理系统开发与维护 | 无       | 1. 基于 ThinkCMF 搭建后台管理系统<br />2. Bootstrap 编写响应式界面<br />3. jQuery、页面兼容至 IE7 |
+   | 项目                       | 简介 | 任务与结果 | 主要技能                                                     |
+   | -------------------------- | ---- | ---------- | ------------------------------------------------------------ |
+   | 会议室预定系统             |      |            | jQuery、Bootstrap                                            |
+   | 读书会网站                 |      |            | ThinkCMF、jQuery                                             |
+   | 多个内容管理系统开发与维护 |      |            | 1. 基于 ThinkCMF 搭建后台管理系统<br />2. Bootstrap 编写响应式界面<br />3. jQuery、页面兼容至 IE7 |
 
 #### 教育经历
 
@@ -102,7 +102,7 @@
 
 1. 自学能力强
 
-   <small>喜欢专研技术，关注前端周刊、相关博客、微信公众号，阅读前端相关书籍，很乐意学习新技术并整理。</small>
+   <small>喜欢钻研技术，关注前端周刊、相关博客、微信公众号，阅读前端相关书籍，很乐意学习新技术。</small>
 
 2. 适应能力强
 
