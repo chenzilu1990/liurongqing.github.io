@@ -64,110 +64,108 @@
     </div>
 
     <script>
-        const oUl = document.querySelector('.box ul');
-        const oStart = document.querySelector('.start');
-        const oEnd = document.querySelector('.end');
-        let dt = null;
+        /**
+         * users 候选人列表
+         * 抽取数量
+        */
+        const lottery = function(users, num) {
+            const oUl = document.querySelector('.box ul');
+            const oStart = document.querySelector('.start');
+            const oEnd = document.querySelector('.end');
+            let dt = null;
 
+            
+
+            oUl.appendChild(createLi(users));
+
+
+            // 开始抽奖
+            oStart.onclick = function () {
+                if (dt) {
+                    return;
+                }
+                dt = setInterval(function () {
+                    getUsers(3);
+                }, 80);
+            }
+
+
+            // 停止抽奖
+            oEnd.onclick = function () {
+                dt && clearInterval(dt);
+                dt = null;
+                oStart.disabled = true;
+            }
+
+
+            // 初始化节点
+            function createLi(arr) {
+                const content = document.createDocumentFragment();
+                const len = arr.length;
+                for (let i = 0; i < len; i++) {
+                    let oLi = document.createElement('li');
+                    oLi.innerHTML = arr[i];
+                    content.appendChild(oLi);
+                }
+                return content;
+            }
+
+            // 要选中多少个用户
+            function getUsers() {
+                const oLiLength = oUl.querySelectorAll('li').length;
+                const a = [...Array(oLiLength - 1).keys()];
+                const aShuffle = shuffle(a);
+                const v = aShuffle.slice(0, num);
+                checked(v);
+            }
+
+            // 选中用户
+            function checked(a) {
+                clear();
+                for (let i = 0, len = a.length; i < len; i++) {
+                    oUl.querySelectorAll('li')[a[i]].classList.add('active');
+                }
+            }
+
+            // 清除选中状态
+            function clear() {
+                const oLis = oUl.querySelectorAll('li');
+
+                for (let v of oLis) {
+                    v.classList.remove('active');
+                }
+            }
+
+            // 打乱数组数据
+            function shuffle(arr) {
+                let m = arr.length,
+                    i;
+                while (m) {
+                    i = Math.floor(Math.random() * m--);
+                    [arr[m], arr[i]] = [arr[i], arr[m]]
+                }
+                return arr;
+            }
+        };
+        
+
+        // 调用
         const candidates = [
-            '小李',
-            '小刘',
-            '小王',
-            '小张',
-            '小黄',
-            '小清',
-            '小荣',
-            '小贺',
-            '大王',
-            '大刘',
-            '大李',
-            '大荣'
-        ];
+                '小李',
+                '小刘',
+                '小王',
+                '小张',
+                '小黄',
+                '小清',
+                '小荣',
+                '小贺',
+                '大王',
+                '大刘',
+                '大李',
+                '大荣'
+            ];
 
-        oUl.appendChild(createLi(candidates));
-
-
-        // 开始抽奖
-        oStart.onclick = function () {
-            if(dt){
-                return;
-            }
-            dt = setInterval(function () {
-                getUsers(3);
-            }, 80);
-        }
-
-
-        // 停止抽奖
-        oEnd.onclick = function () {
-            dt && clearInterval(dt);
-            dt = null;
-            oStart.disabled = true;
-        }
-
-
-        // 初始化节点
-        function createLi(arr) {
-            const content = document.createDocumentFragment();
-            const len = arr.length;
-            for (let i = 0; i < len; i++) {
-                let oLi = document.createElement('li');
-                oLi.innerHTML = arr[i];
-                content.appendChild(oLi);
-            }
-            return content;
-        }
-
-        // 要选中多少个用户
-        function getUsers(n) {
-            const oLiLength = oUl.querySelectorAll('li').length;
-            const a = [...Array(oLiLength - 1).keys()];
-            const aShuffle = shuffle(a);
-            const users = aShuffle.slice(0, n);
-            checked(users);
-        }
-
-        // 选中用户
-        function checked(a) {
-            clear();
-            for (let i = 0, len = a.length; i < len; i++) {
-                oUl.querySelectorAll('li')[a[i]].classList.add('active');
-            }
-        }
-
-        // 清除选中状态
-        function clear() {
-            const oLis = oUl.querySelectorAll('li');
-
-            for (let v of oLis) {
-                v.classList.remove('active');
-            }
-        }
-
-        // 打乱数组数据
-        function shuffle (arr){
-            let m = arr.length, t, i;
-            while(m) {
-                i = Math.floor(Math.random() * m--);
-                t = arr[m];
-                arr[m] = arr[i];
-                arr[i] = t;
-            }
-            return arr;
-        }
-
-        Array.prototype.shuffle = function () {
-            var array = this;
-            var m = array.length,
-                t, i;
-            while (m) {
-                i = Math.floor(Math.random() * m--);
-                t = array[m];
-                array[m] = array[i];
-                array[i] = t;
-            }
-            return array;
-        }
+        lottery(candidates, 2);
     </script>
 
 </body>
