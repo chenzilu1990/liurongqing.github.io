@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小库科技面试题小试牛刀</title>
+    <style>
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li {
+            width: 30%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        li.active {
+            background: red;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .btn button {
+            border: 0;
+            background: #ddd;
+        }
+
+        .btn button:hover,
+        .btn button:active {
+            background: #bbb;
+        }
+
+        .btn .end {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btn">
+        <button class="start">开始抽奖</button>
+        <button class="end">停止抽奖</button>
+    </div>
+
+    <div class="box">
+        <ul></ul>
+    </div>
+
+    <script>
+        const oUl = document.querySelector('.box ul');
+        const oStart = document.querySelector('.start');
+        const oEnd = document.querySelector('.end');
+        let dt = null;
+
+        const candidates = [
+            '小李',
+            '小刘',
+            '小王',
+            '小张',
+            '小黄',
+            '小清',
+            '小荣',
+            '小贺',
+            '大王',
+            '大刘',
+            '大李',
+            '大荣'
+        ];
+
+        oUl.appendChild(createLi(candidates));
+
+
+        // 开始抽奖
+        oStart.onclick = function () {
+            if(dt){
+                return;
+            }
+            dt = setInterval(function () {
+                getUsers(3);
+            }, 80);
+        }
+
+
+        // 停止抽奖
+        oEnd.onclick = function () {
+            dt && clearInterval(dt);
+            dt = null;
+            oStart.disabled = true;
+        }
+
+
+        // 初始化节点
+        function createLi(arr) {
+            const content = document.createDocumentFragment();
+            const len = arr.length;
+            for (let i = 0; i < len; i++) {
+                let oLi = document.createElement('li');
+                oLi.innerHTML = arr[i];
+                content.appendChild(oLi);
+            }
+            return content;
+        }
+
+        // 要选中多少个用户
+        function getUsers(n) {
+            const oLiLength = oUl.querySelectorAll('li').length;
+            const a = [...Array(oLiLength - 1).keys()];
+            const aShuffle = shuffle(a);
+            const users = aShuffle.slice(0, n);
+            checked(users);
+        }
+
+        // 选中用户
+        function checked(a) {
+            clear();
+            for (let i = 0, len = a.length; i < len; i++) {
+                oUl.querySelectorAll('li')[a[i]].classList.add('active');
+            }
+        }
+
+        // 清除选中状态
+        function clear() {
+            const oLis = oUl.querySelectorAll('li');
+
+            for (let v of oLis) {
+                v.classList.remove('active');
+            }
+        }
+
+        // 打乱数组数据
+        function shuffle (arr){
+            let m = arr.length, t, i;
+            while(m) {
+                i = Math.floor(Math.random() * m--);
+                t = arr[m];
+                arr[m] = arr[i];
+                arr[i] = t;
+            }
+            return arr;
+        }
+
+        Array.prototype.shuffle = function () {
+            var array = this;
+            var m = array.length,
+                t, i;
+            while (m) {
+                i = Math.floor(Math.random() * m--);
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+            }
+            return array;
+        }
+    </script>
+
+</body>
+
+
+
+</html>
