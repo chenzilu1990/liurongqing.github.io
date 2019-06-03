@@ -2,6 +2,7 @@
 
 :mouse: :cow: :tiger: :rabbit: :dragon_face: :snake: :horse: :sheep: :monkey_face: :chicken: :dog: :pig:
 
+[emoji](https://github.com/WebpageFX/emoji-cheat-sheet.com)
 
 
 ## 博客地址
